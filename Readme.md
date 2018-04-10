@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Delamar](https://up.htmlacademy.ru/adaptive/14/user/504425).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Козлов](https://up.htmlacademy.ru/adaptive/14/user/27386).
 
 ---
 
