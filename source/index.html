@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>PINK</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="main-header">
-  <img class="main-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="pink">
+  <a class="main-header__logo">
+    <img class="main-header__logo-image" src="http://placehold.it/75x22"
+         width="75" height="22" alt="pink">
+  </a>
   <nav class="main-nav">
     <button type="button" class="main-nav__button" aria-label="Меню"></button>
     <ul>
       <li class="main-nav__item">
-        <a>Главная</a>
+        <a class="main-nav__item-link">Главная</a>
       </li>
       <li class="main-nav__item">
         <a href="photo.html" class="main-nav__item-link">Фотографии</a>
@@ -28,7 +32,7 @@
     <h1 class="visually-hidden">&laquo;Пинк&raquo;&nbsp;&mdash; приложения, которое раскрасит Ваши серые будни в&nbsp;розовый
       цвет.</h1>
     <img class="intro__image-hand" src="http://placehold.it/320x314" width="320" height="314" alt="iphone in hand">
-    <a class="button button--download" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
+    <a class="button intro__button-download" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
     <ul class="intro__store-list">
       <li class="intro__store-item">
         <a class="intro__store-icon intro__store-icon--itunes" href="https://www.apple.com/ru/itunes/"
@@ -56,12 +60,13 @@
     <ul class="feature-list">
       <li class="feature-list__item">
         <h3 class="feature-list__title">Поднимает настроение</h3>
-        <p class="feature-list__description">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально
-          в&nbsp;несколько кликов!</p>
+        <p class="feature-list__description">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию
+          буквально в&nbsp;несколько кликов!</p>
       </li>
       <li class="feature-list__item">
         <h3 class="feature-list__title">Меняет мир вокруг</h3>
-        <p class="feature-list__description">Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью, чтобы
+        <p class="feature-list__description">Сделайте снимок и&nbsp;украсьте его смайликом или текстовой подписью,
+          чтобы
           усилить эффект</p>
       </li>
       <li class="feature-list__item">
@@ -71,10 +76,10 @@
       </li>
     </ul>
   </section>
-  <section class="reviews slider" aria-label="hidden">
+  <section class="reviews" aria-hidden="true">
     <h2 class="visually-hidden">Отзывы о&nbsp;нас!</h2>
-    <div class="slider__wrapper">
-      <div class="reviews__wrapper ">
+    <div class="slider slider__wrapper">
+      <div class="reviews__wrapper slider__list">
         <blockquote class="reviews__item slider__item slider__item--current">
           <cite class="reviews__title">Николай Петров</cite>
           <p class="reviews__description">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому
@@ -101,7 +106,7 @@
         </blockquote>
       </div>
       <div class="slider__control">
-        <button class="slider__toggle" type="button"></button>
+        <button class="slider__toggle slider__toggle--current" type="button"></button>
         <button class="slider__toggle" type="button"></button>
         <button class="slider__toggle" type="button"></button>
       </div>

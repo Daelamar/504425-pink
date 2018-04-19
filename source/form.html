@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Конкурс</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="main-header">
@@ -31,97 +32,100 @@
 </header>
 <section class="form">
   <h2 class="visually-hidden">Учавствуйте в&nbsp;конкурсе</h2>
-  <p class="form__caption">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту!</p>
+  <p class="form__caption">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу
+    бонусную карту!</p>
   <form action="https://echo.htmlacademy.ru/" method="post">
-    <fieldset class="form__field user-data">
-      <ul class="form__list user-data__list">
-        <li class="form__item user-data__item">
-          <label class="form__label user-data__label" for="user-last-name">Фамилия:</label>
-          <input class="form__input user-data__input" type="text" name="user-last-name" id="user-last-name"
+    <fieldset class="form__field">
+      <ul class="form__list">
+        <li class="form__item">
+          <label class="form__label" for="user-last-name">Фамилия:</label>
+          <input class="form__input" type="text" name="user-last-name" id="user-last-name"
                  placeholder="Укажите фамилию *" required>
         </li>
-        <li class="form__item user-data__item">
-          <label class="form__label user-data__label" for="user-first-name">Имя:</label>
-          <input class="form__input user-data__input" type="text" name="user-first-name" id="user-first-name"
+        <li class="form__item">
+          <label class="form__label" for="user-first-name">Имя:</label>
+          <input class="form__input" type="text" name="user-first-name" id="user-first-name"
                  placeholder="Введите ваше имя *" required>
         </li>
-        <li class="form__item user-data__item">
-          <label class="form__label user-data__label" for="user-second-name">Отчество:</label>
-          <input class="form__input user-data__input" type="text" name="user-second-name" id="user-second-name"
+        <li class="form__item">
+          <label class="form__label" for="user-second-name">Отчество:</label>
+          <input class="form__input" type="text" name="user-second-name" id="user-second-name"
                  placeholder="Ну и отчество тоже">
         </li>
       </ul>
     </fieldset>
-    <fieldset class="form__field user-achievement">
+    <fieldset class="form__field">
       <legend>Ваши безбашенные достижения в&nbsp;путешествии</legend>
-      <ul class="form__list user-achievement__list">
-        <li class="form__item user-achievement__item">
-          <input class="form__input user-achievement__checkbox" type="checkbox" name="achievements[]"
+      <ul class="form__list">
+        <li class="form__item">
+          <input class="form__input" type="checkbox" name="achievements[]"
                  id="achievement-one" checked>
-          <label class="form__label user-achievement__label" for="achievement-one">Сделал селфи с&nbsp;акулой</label>
+          <label class="form__label" for="achievement-one">Сделал селфи с&nbsp;акулой</label>
         </li>
-        <li class="form__item user-achievement__item">
-          <input class="form__input user-achievement__checkbox" type="checkbox" name="achievements[]"
+        <li class="form__item">
+          <input class="form__input" type="checkbox" name="achievements[]"
                  id="achievement-two" checked>
-          <label class="form__label user-achievement__label" for="achievement-two">Обгорел на&nbsp;пляже</label>
+          <label class="form__label" for="achievement-two">Обгорел на&nbsp;пляже</label>
         </li>
-        <li class="form__item user-achievement__item">
-          <input class="form__input user-achievement__checkbox" type="checkbox" name="achievements[]"
+        <li class="form__item">
+          <input class="form__input" type="checkbox" name="achievements[]"
                  id="achievement-three">
-          <label class="form__label user-achievement__label" for="achievement-three">Видел Чака Норриса</label>
+          <label class="form__label" for="achievement-three">Видел Чака Норриса</label>
         </li>
-        <li class="form__item user-achievement__item">
-          <input class="form__input user-achievement__checkbox" type="checkbox" name="achievements[]"
+        <li class="form__item">
+          <input class="form__input" type="checkbox" name="achievements[]"
                  id="achievement-four">
-          <label class="form__label user-achievement__label" for="achievement-four">Накупил сувениров</label>
+          <label class="form__label" for="achievement-four">Накупил сувениров</label>
         </li>
-        <li class="form__item user-achievement__item">
-          <input class="form__input user-achievement__checkbox" type="checkbox" name="achievements[]"
+        <li class="form__item">
+          <input class="form__input" type="checkbox" name="achievements[]"
                  id="achievement-five"
                  checked>
-          <label class="form__label user-achievement__label" for="achievement-five">Удержал башню</label>
+          <label class="form__label" for="achievement-five">Удержал башню</label>
         </li>
-        <li class="form__item user-achievement__item">
-          <input class="form__input user-achievement__checkbox" type="checkbox" name="achievements[]"
+        <li class="form__item">
+          <input class="form__input" type="checkbox" name="achievements[]"
                  id="achievement-six">
-          <label class="form__label user-achievement__label" for="achievement-six">Разгромил отель</label>
+          <label class="form__label" for="achievement-six">Разгромил отель</label>
         </li>
       </ul>
     </fieldset>
-    <fieldset class="form__field user-contacts">
-      <ul class="form__list user-contacts__list">
-        <li class="form__item user-contacts__item">
-          <label class="form__label user-contacts__label" for="telephone">Номер телефона</label>
-          <input class="form__input user-contacts__input" type="tel" name="telephone" id="telephone"
+    <fieldset class="form__field">
+      <ul class="form__list">
+        <li class="form__item">
+          <label class="form__label" for="telephone">Номер телефона</label>
+          <input class="form__input" type="tel" name="telephone" id="telephone"
                  placeholder="Номер, пожалуйста">
         </li>
-        <li class="form__item user-contacts__item">
-          <label class="form__label user-contacts__label" for="user-mail">Адрес почты</label>
-          <input class="form__input user-contacts__input" type="email" name="user-mail" id="user-mail"
+        <li class="form__item">
+          <label class="form__label" for="user-mail">Адрес почты</label>
+          <input class="form__input" type="email" name="user-mail" id="user-mail"
                  placeholder="Введите почту *"
                  required>
         </li>
       </ul>
     </fieldset>
-    <fieldset class="form__field user-app">
+    <fieldset class="form__field">
       <legend>С&nbsp;каким приложением путешествовали?</legend>
-      <ul class="form__list user-app__list">
-        <li class="form__item user-app__item">
-          <input class="form__input user-app__input" type="radio" name="app" id="iphone" value="iphone" checked>
-          <label class="form__label user-app__label" for="iphone">Pink для iOS</label>
+      <ul class="form__list">
+        <li class="form__item">
+          <input class="form__input" type="radio" name="app" id="iphone" value="iphone" checked>
+          <label class="form__label" for="iphone">Pink для iOS</label>
         </li>
-        <li class="form__item user-app__item">
-          <input class="form__input user-app__input" type="radio" name="app" id="android" value="android">
-          <label class="form__label user-app__label" for="android">Pink на&nbsp;Android</label>
+        <li class="form__item">
+          <input class="form__input" type="radio" name="app" id="android" value="android">
+          <label class="form__label" for="android">Pink на&nbsp;Android</label>
         </li>
-        <li class="form__item user-app__item">
-          <input class="form__input user-app__input" type="radio" name="app" id="windows" value="windows">
-          <label class="form__label user-app__label" for="windows">Windows Phone</label>
+        <li class="form__item">
+          <input class="form__input" type="radio" name="app" id="windows" value="windows">
+          <label class="form__label" for="windows">Windows Phone</label>
         </li>
       </ul>
     </fieldset>
-    <fieldset class="form__field user-emotion">
-      <label class="form__label user-emotion__label">Опишите свои эмоции</label>
+    <fieldset class="form__field">
+      <legend>
+        <label class="form__label">Опишите свои эмоции</label>
+      </legend>
       <textarea name="comment" id="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
     </fieldset>
     <button type="submit" class="button button--form">Отправить форму</button>
