@@ -1,0 +1,6 @@
+.prices {
+  @include main-text(14px,30px,normal);
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  padding: 0 20px 45px;
+}

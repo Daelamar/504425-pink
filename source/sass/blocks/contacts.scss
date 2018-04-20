@@ -1,0 +1,7 @@
+.contacts {
+  @include main-text(24px,auto,light);
+  background-color: #ffffff;
+  }
+.contacts__wrapper {
+  padding: 45px 20px 40px;
+}

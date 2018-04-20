@@ -1,0 +1,9 @@
+.main-nav {
+@include main-text(18px,32px,bold);
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: $header-color;
+}
+.main-nav__list {
+  display: none;
+}
