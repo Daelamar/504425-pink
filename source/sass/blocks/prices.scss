@@ -1,6 +1,24 @@
 .prices {
-  @include main-text(14px,30px,normal);
+  @include main-text(14px, 30px, normal);
   text-transform: uppercase;
   background-color: #f2f2f2;
   padding: 0 20px 45px;
+}
+
+.prices__header {
+  background-color: #283645;
+}
+
+.prices__title {
+  @include main-text(18px, 30px, 700);
+  color: #ffffff;
+}
+
+.prices__hit {
+  color: #ffffff;
+}
+
+.prices__cost {
+  @include main-text(24px, 30px, 300);
+  color: #ffffff;
 }

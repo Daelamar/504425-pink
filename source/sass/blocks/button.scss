@@ -1,8 +1,7 @@
 .button {
   font-family: inherit;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
+
+  @include main-text(18px, 18px, 700);
   color: #ffffff;
   text-transform: uppercase;
   border: none;

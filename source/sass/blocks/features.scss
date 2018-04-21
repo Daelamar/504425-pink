@@ -6,3 +6,12 @@
 .features__header {
   background-color: #ffffff;
 }
+
+.features__title,
+.features__caption {
+  @include main-text(24px, auto, 300);
+}
+
+.feature-list__title {
+  @include main-text(18px, 30px, 700);
+}

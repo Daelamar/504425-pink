@@ -1,7 +1,12 @@
 .contacts {
-  @include main-text(24px,auto,light);
+  @include main-text(24px, auto, 300);
   background-color: #ffffff;
-  }
+}
+
 .contacts__wrapper {
   padding: 45px 20px 40px;
+}
+
+.contacts-list__title {
+  @include main-text(18px, auto, 700);
 }

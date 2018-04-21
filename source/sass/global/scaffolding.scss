@@ -14,11 +14,12 @@ body {
   font-family: "Open Sans", "Arial", sans-serif;
   color: #283645;
 
-  @include main-text(14px,24px,normal);
+  @include main-text(14px, 24px, normal);
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
