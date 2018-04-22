@@ -1,9 +1,10 @@
+@import "global/normalize";
 @import "global/mixins";
 @import "global/variables";
 @import "global/scaffolding";
-@import "global/visually-hidden";
-@import "global/normalize";
 @import "global/fonts";
+@import "blocks/visually-hidden";
+@import "blocks/container";
 @import "blocks/main-header";
 @import "blocks/main-nav";
 @import "blocks/button";

@@ -1,8 +1,8 @@
 .prices {
-  @include main-text(14px, 30px, normal);
+  padding: 0 20px 45px;
+  line-height: 2.1;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  padding: 0 20px 45px;
 }
 
 .prices__header {
@@ -10,7 +10,9 @@
 }
 
 .prices__title {
-  @include main-text(18px, 30px, 700);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -19,6 +21,8 @@
 }
 
 .prices__cost {
-  @include main-text(24px, 30px, 300);
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
   color: #ffffff;
 }

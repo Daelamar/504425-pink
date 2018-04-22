@@ -10,7 +10,7 @@
   <header class="main-header">
     <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-image" src="http://placehold.it/75x22"
-           width="75" height="22" alt="pink">
+            width="75" height="22" alt="pink">
     </a>
     <nav class="main-nav">
       <button class="main-nav__button" type="button" aria-label="Меню"></button>
@@ -32,7 +32,7 @@
   </header>
   <main>
     <div class="intro">
-      <h1>Фотографии пользователей</h1>
+      <h1 class="intro__title">Фотографии пользователей</h1>
     </div>
     <section class="gallery">
       <h2 class="visually-hidden">Галерея фотографий</h2>
@@ -41,7 +41,7 @@
       <figure class="gallery__item user-post user-post--panorama">
         <span class="user-post__label">Панорама дня</span>
         <img src="http://placehold.it/320x137" alt="bridge" width="320" height="137"
-             class="user-post__image user-post__image--panorama">
+              class="user-post__image user-post__image--panorama">
         <div class="user-post__wrapper"></div>
         <p class="user-post__user-info">
           <b class="user-post__name">Анна</b>
@@ -121,28 +121,28 @@
       <p class="upload_caption">Затмите их&nbsp;всех! Выкладывайте все, что накопилось в&nbsp;телефоне!</p>
       <form class="photo-filters" action="https://echo.htmlacademy.ru/" method="post">
         <img class="photo-filters__image" src="http://placehold.it/280x374" alt="uploaded photo" width="280"
-             height="374">
+              height="374">
         <div class="photo-filters__wrapper photo-filters__wrapper-icons" aria-hidden="true">
           <label for="harshness" class="visually-hidden">Резкость</label>
           <input class="photo-filters__radio photo-filters__radio--harshness" type="radio" name="filter" id="harshness"
-                 value="harshness">
+                  value="harshness">
           <label for="contrast" class="visually-hidden">Контрастность</label>
           <input class="photo-filters__radio photo-filters__radio--contrast" type="radio" name="filter" id="contrast"
-                 value="contrast">
+                  value="contrast">
           <label for="brightness" class="visually-hidden">Яркость</label>
           <input class="photo-filters__radio photo-filters__radio--brightness" type="radio" name="filter"
-                 id="brightness"
-                 value="brightness">
+                  id="brightness"
+                  value="brightness">
         </div>
         <div class="photo-filters__wrapper photo-filters__wrapper-range" aria-hidden="true">
           <label for="value-contrast" class="visually-hidden">Диапазон значений</label>
           <input class="photo-filters__range" type="range" name="value-contrast" id="value-contrast" min="1" max="100">
           <label for="value-harshness" class="visually-hidden">Диапазон значений</label>
           <input class="photo-filters__range" type="range" name="value-harshness" id="value-harshness" min="1"
-                 max="100">
+                  max="100">
           <label for="value-brightness" class="visually-hidden">Диапазон значений</label>
           <input class="photo-filters__range" type="range" name="value-brightness" id="value-brightness" min="1"
-                 max="100">
+                  max="100">
         </div>
         <div class="photo-filters__wrapper photo-filters__wrapper--buttons">
           <button type="submit" class="button button--post">Запостить</button>

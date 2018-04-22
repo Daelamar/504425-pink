@@ -6,8 +6,8 @@
   padding: 40px 20px;
   border: none;
 
-  legend {
-    @include main-text(14px, 18px, normal);
+  .form__legend {
+    line-height: 1.2;
     text-transform: uppercase;
   }
 
@@ -17,19 +17,21 @@
 }
 
 .form__caption {
-  @include main-text(14px, 30px, normal);
+  line-height: 2.1;
 }
 
 .form__label {
-  @include main-text(14px, 30px, normal);
+  line-height: 2.1;
   text-transform: uppercase;
 
   &:nth-child(even) {
-    @include main-text(18px, 30px, normal);
+    font-size: 18px;
+    line-height: 1.6;
     text-transform: none;
   }
 }
 
 .form__input {
-  @include main-text(18px, 30px, normal);
+  font-size: 18px;
+  line-height: 1.6;
 }

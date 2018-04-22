@@ -1,12 +1,15 @@
-.popup--error {
-  background-color: #f2f2f2;
+.popup {
+  &--error {
+    background-color: #f2f2f2;
+  }
 }
 
 .popup__wrapper {
-  background-color: #ffffff;
   padding: 50px 20px 45px;
+  background-color: #ffffff;
 }
 
 .popup__title {
-  @include main-text(18px, 24px, 700);
+  font-size: 18px;
+  font-weight: 700;
 }

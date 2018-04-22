@@ -3,12 +3,20 @@
   background-color: #f2f2f2;
 }
 
-.user-post__image--panorama {
-  margin-left: -20px;
+.user-post__image {
+  &--panorama {
+    margin-left: -20px;
+  }
 }
 
-.user-post__time,
+.user-post__time {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .user-post__likes {
-  @include main-text(12px, 24px, 300);
+  font-size: 12px;
+  font-weight: 300;
   text-transform: uppercase;
 }

@@ -1,10 +1,12 @@
 .reviews {
-  @include main-text(14px, 30px, normal);
+  line-height: 2.1;
   background-color: #ffffff;
   padding: 48px 20px 135px;
 }
 
 .reviews__title {
-  @include main-text(18px, 30px, 700);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 700;
   font-style: normal;
 }

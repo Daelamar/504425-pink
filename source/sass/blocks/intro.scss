@@ -1,9 +1,10 @@
 .intro {
   color: #ffffff;
-  background: $header-color url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+  background: $color-header url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
 
-  h1 {
-    @include main-text(24px, auto, 300);
+  .intro__title {
+    font-size: 24px;
+    font-weight: 300;
   }
 }
 

@@ -1,6 +1,6 @@
 .features {
-  background: #f2f2f2 url("../../img/iphone-screen-mobile@1x.png") no-repeat center bottom;
   padding: 45px 20px 320px;
+  background: #f2f2f2 url("../../img/iphone-screen-mobile@1x.png") no-repeat center bottom;
 }
 
 .features__header {
@@ -9,9 +9,12 @@
 
 .features__title,
 .features__caption {
-  @include main-text(24px, auto, 300);
+  font-size: 24px;
+  font-weight: 300;
 }
 
 .feature-list__title {
-  @include main-text(18px, 30px, 700);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 700;
 }

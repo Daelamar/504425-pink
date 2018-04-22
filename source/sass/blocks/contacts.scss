@@ -1,5 +1,6 @@
 .contacts {
-  @include main-text(24px, auto, 300);
+  font-size: 24px;
+  font-weight: 300;
   background-color: #ffffff;
 }
 
@@ -8,5 +9,6 @@
 }
 
 .contacts-list__title {
-  @include main-text(18px, auto, 700);
+  font-size: 18px;
+  font-weight: 700;
 }
