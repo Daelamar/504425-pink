@@ -1,0 +1,13 @@
+.intro {
+  color: #ffffff;
+  background: $color-header url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+
+  .intro__title {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+.intro__wrapper {
+  padding: 25px 20px 35px;
+}
