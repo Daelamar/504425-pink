@@ -6,3 +6,26 @@
   text-transform: uppercase;
   background-color: $color-header;
 }
+
+.main-nav__list {
+  @include listStyle;
+  min-height: 255px; /*временно*/
+}
+
+.main-nav__item {
+  min-height: 65px; /*временно*/
+  @include outlineTemp;
+}
+
+@media (min-width: $desktop-width) {
+  .main-header__top-nav {
+    padding: 0;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    min-height: inherit; /*временно*/
+  }
+}

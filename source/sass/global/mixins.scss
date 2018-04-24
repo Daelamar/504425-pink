@@ -1,0 +1,9 @@
+@mixin outlineTemp {
+  outline: 2px solid yellow; /*временно для обводки*/
+}
+
+@mixin listStyle {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

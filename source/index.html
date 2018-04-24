@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>PINK</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
   <header class="main-header">
-    <a class="main-header__logo">
-      <img class="main-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="pink">
-    </a>
+    <div class="main-header__top-nav">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="pink">
+      </a>
+      <button class="main-header__button-menu" type="button" aria-label="Меню"></button>
+    </div>
     <nav class="main-nav">
-      <button type="button" class="main-nav__button" aria-label="Меню"></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__item-link">Главная</a>
@@ -34,7 +38,6 @@
       <h1 class="visually-hidden">&laquo;Пинк&raquo;&nbsp;&mdash; приложения, которое раскрасит
         Ваши серые будни в&nbsp;розовый
         цвет.</h1>
-      <img class="intro__image-hand" src="http://placehold.it/320x314" width="320" height="314" alt="iphone in hand">
       <div class="intro__wrapper">
         <a class="button intro__button-download" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
         <ul class="intro__store-list">

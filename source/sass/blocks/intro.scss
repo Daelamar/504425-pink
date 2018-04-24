@@ -1,13 +1,44 @@
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px 20px 35px;
+  min-height: 670px; /*временно*/
   color: #ffffff;
+
   background: $color-header url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
 
-  .intro__title {
-    font-size: 24px;
-    font-weight: 300;
+  &--main {
+    background: url("../../img/iphone-hand-mobile@1x.png") no-repeat 0 150px, url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+    background-color: $color-header;
   }
 }
 
+.intro__title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
 .intro__wrapper {
-  padding: 25px 20px 35px;
+  margin-right: auto;
+  @include outlineTemp;
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    padding: 100px 20px;
+    min-height: 630px; /*временно*/
+
+    &--main {
+      background: url("../../img/iphone-hand-mobile@1x.png") no-repeat 85% 100%, url("../../img/bg-back-mobile@1x.jpg") no-repeat;
+      background-size: auto, cover;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    padding: 110px;
+    min-height: 730px; /*временно*/
+  }
 }
