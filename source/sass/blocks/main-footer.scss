@@ -1,4 +1,33 @@
 .main-footer {
   padding: 60px 20px 40px;
   line-height: 1.2;
+
+  &--index {
+    display: none;
+  }
+}
+
+.social-list,
+.main-footer__logo,
+.main-footer__refinement {
+  @include outlineTemp;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+
+    &--index {
+      display: flex;
+
+    }
+  }
+}
+
+@media (min-width: $desktop-width){
+  .main-footer {
+    padding: 70px 120px;
+  }
 }

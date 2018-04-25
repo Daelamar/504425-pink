@@ -6,9 +6,43 @@
 
 .contacts__wrapper {
   padding: 45px 20px 40px;
+
+  @include outlineTemp;
+}
+
+.contacts-list__wrapper {
+  @include outlineTemp;
 }
 
 .contacts-list__title {
   font-size: 18px;
   font-weight: 700;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    padding: 50px 20px 25px;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts-list__wrapper {
+    min-height: 100px; /*временно*/
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__wrapper {
+    padding: 65px 130px;
+  }
+
+  .contacts-list__wrapper {
+    min-height: 100px; /*временно*/
+    width: 30%;
+  }
 }

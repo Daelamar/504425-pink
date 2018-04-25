@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 25px 20px 35px;
-  min-height: 670px; /*временно*/
   color: #ffffff;
 
   background: $color-header url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
 
   &--main {
+    min-height: 670px; /*временно*/
     background: url("../../img/iphone-hand-mobile@1x.png") no-repeat 0 150px, url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
     background-color: $color-header;
   }
@@ -26,10 +26,9 @@
 
 @media (min-width: $tablet-width) {
   .intro {
-    padding: 100px 20px;
-    min-height: 630px; /*временно*/
 
     &--main {
+      min-height: 630px; /*временно*/
       background: url("../../img/iphone-hand-mobile@1x.png") no-repeat 85% 100%, url("../../img/bg-back-mobile@1x.jpg") no-repeat;
       background-size: auto, cover;
     }
@@ -39,6 +38,8 @@
 @media (min-width: $desktop-width) {
   .intro {
     padding: 110px;
-    min-height: 730px; /*временно*/
+    &--main {
+      min-height: 730px; /*временно*/
+    }
   }
 }

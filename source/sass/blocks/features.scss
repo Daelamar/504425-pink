@@ -1,6 +1,8 @@
 .features {
   background: #f2f2f2 url("../../img/iphone-screen-mobile@1x.png") no-repeat center bottom;
   min-height: 1000px; /*временно*/
+
+  @include outlineTemp;
 }
 
 .features__header {

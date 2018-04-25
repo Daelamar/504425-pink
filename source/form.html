@@ -42,7 +42,7 @@
       <p class="form__caption">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000
         миль на&nbsp;вашу
         бонусную карту!</p>
-      <form action="https://echo.htmlacademy.ru/" method="post">
+      <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__field">
           <ul class="form__list">
             <li class="form__item">
@@ -179,9 +179,11 @@
           <textarea name="comment" id="comment"
                     placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
-        <button type="submit" class="button button--form">Отправить форму</button>
+        <div class="form__footer">
+          <button type="submit" class="button button--form">Отправить форму</button>
+          <p class="form__warning">* &mdash; обязательные поля</p>
+        </div>
       </form>
-      <p class="form__warning">* &mdash; обязательные поля</p>
     </section>
   </main>
   <footer class="main-footer">

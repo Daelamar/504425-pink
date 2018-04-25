@@ -1,0 +1,34 @@
+.diagram {
+  display: none;
+  padding: 80px 20px 80px;
+
+  @include outlineTemp;
+}
+
+.diagram__wrapper {
+  margin-left: auto;
+  width: 310px;
+
+  @include outlineTemp;
+}
+
+.diagram__title {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.diagram__link {
+  text-decoration: underline;
+}
+
+@media (min-width: $tablet-width) {
+  .diagram {
+    display: flex;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .diagram__wrapper {
+    width: 550px;
+  }
+}

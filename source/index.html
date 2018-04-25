@@ -91,12 +91,31 @@
         </li>
       </ul>
     </section>
+    <section class="diagram">
+      <div class="diagram__wrapper">
+        <h2 class="diagram__title">
+          Эффект<br>на&nbsp;24&nbsp;часа!
+
+        </h2>
+        <p class="diagram__description">
+          Британские ученые провели исследования и&nbsp;доказали,
+          что положительный эффект от&nbsp;использования приложения длится целые сутки!
+        </p>
+        <a class="diagram__link" href="#">
+          Узнать больше об&nbsp;исследовании
+        </a>
+      </div>
+    </section>
     <section class="reviews" aria-hidden="true">
       <h2 class="visually-hidden">Отзывы о&nbsp;нас!</h2>
       <div class="slider">
         <div class="reviews__wrapper slider__wrapper">
-          <blockquote class="reviews__item slider__item slider__item--current">
-            <cite class="reviews__title">Николай Петров</cite>
+          <blockquote
+            class="reviews__item slider__item slider__item--current reviews__item--current">
+            <div class="reviews__username-wrapper">
+              <cite class="reviews__title">Николай Петров</cite>
+              <p class="reviews__profession">25 лет, водитель трамвая</p>
+            </div>
             <p class="reviews__description">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому
               взглянуть на&nbsp;привычные серые вещи!
               А еще я познакомился со&nbsp;своей будущей
@@ -104,7 +123,10 @@
             </p>
           </blockquote>
           <blockquote class="reviews__item slider__item">
-            <cite class="reviews__title">Николай Петров</cite>
+            <div class="reviews__username-wrapper">
+              <cite class="reviews__title">Николай Петров</cite>
+              <p class="reviews__profession">25 лет, водитель трамвая</p>
+            </div>
             <p class="reviews__description">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому
               взглянуть на&nbsp;привычные серые вещи!
               А еще я познакомился со&nbsp;своей будущей
@@ -112,7 +134,10 @@
             </p>
           </blockquote>
           <blockquote class="reviews__item slider__item">
-            <cite class="reviews__title">Николай Петров</cite>
+            <div class="reviews__username-wrapper">
+              <cite class="reviews__title">Николай Петров</cite>
+              <p class="reviews__profession">25 лет, водитель трамвая</p>
+            </div>
             <p class="reviews__description">&laquo;Это приложение перевернуло мой мир и&nbsp;позволило по-новому
               взглянуть на&nbsp;привычные серые вещи!
               А еще я познакомился со&nbsp;своей будущей
@@ -145,7 +170,7 @@
               </li>
             </ul>
           </div>
-          <div class="prices__item slider__item slider__item--current">
+          <div class="prices__item slider__item slider__item--current prices__item--current">
             <div class="prices__header">
               <span class="prices__hit">Хит</span>
               <p class="prices__title">Стандарт</p>
@@ -183,21 +208,47 @@
         <h2 class="visually-hidden">Наши контакты</h2>
         <p class="contacts_question">Остались вопросы? Свяжитесь с&nbsp;нами!</p>
         <dl class="contacts-list">
-          <dt class="contacts-list__title">Звоните:</dt>
-          <dd class="contacts-list__description">
-            <a href="tel:+78125556666" class="contacts-list__link">+7 (812) 555-66-66</a>
-          </dd>
-          <dt class="contacts-list__title">Пишите:</dt>
-          <dd class="contacts-list__description">
-            <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">mail@htmlacademy.ru</a>
-          </dd>
-          <dt class="contacts-list__title">Приезжайте в&nbsp;гости:</dt>
-          <dd class="contacts-list__description">ул. Большая Конюшенная, 19/8</dd>
+          <div class="contacts-list__wrapper">
+            <dt class="contacts-list__title">Звоните:</dt>
+            <dd class="contacts-list__description">
+              <a href="tel:+78125556666" class="contacts-list__link">+7 (812) 555-66-66</a>
+            </dd>
+          </div>
+          <div class="contacts-list__wrapper">
+            <dt class="contacts-list__title">Пишите:</dt>
+            <dd class="contacts-list__description">
+              <a href="mailto:mail@htmlacademy.ru" class="contacts-list__link">mail@htmlacademy.ru</a>
+            </dd>
+          </div>
+          <div class="contacts-list__wrapper">
+            <dt class="contacts-list__title">Приезжайте в&nbsp;гости:</dt>
+            <dd class="contacts-list__description">ул. Большая Конюшенная, 19/8</dd>
+          </div>
         </dl>
       </div>
-      <img class="map" src="http://placehold.it/320x645" alt="map" width="320" height="645">
+      <div class="map"></div>
     </section>
   </main>
+  <footer class="main-footer main-footer--index">
+    <a href="index.html" class="main-footer__logo">
+      <img class="main-footer__logo-image" src="http://placehold.it/147x40" width="147" height="40" alt="pink">
+    </a>
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a href="#" class="social-list__link" aria-label="twitter"></a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link" aria-label="facebook"></a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link" aria-label="youtube"></a>
+      </li>
+    </ul>
+    <div class="main-footer__refinement">
+      <p class="main-footer__caption">Разработано </p>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="main-footer__refinement-link"></a>
+    </div>
+  </footer>
 </div>
 </body>
 </html>
