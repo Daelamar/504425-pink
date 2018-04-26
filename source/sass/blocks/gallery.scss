@@ -1,7 +1,27 @@
 .gallery {
   padding: 50px 20px 0;
+
+  @include outlineTemp;
 }
 
 .gallery__caption {
   line-height: 2.1;
+}
+
+.gallery__item {
+  @include outlineTemp;
+}
+
+@media (min-width: $tablet-width) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gallery {
+    padding: 50px 120px 0;
+  }
 }

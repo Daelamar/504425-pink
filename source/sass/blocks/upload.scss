@@ -1,4 +1,69 @@
 .upload {
   padding: 50px 20px 40px;
   line-height: 2.1;
+
+  @include outlineTemp;
+}
+
+.photo-filters {
+  background-color: #f2f2f2;
+
+  @include outlineTemp;
+}
+
+.photo-filters__wrapper,
+.photo-filters__wrapper-icons,
+.photo-filters__wrapper-range,
+.photo-filters__wrapper--buttons {
+  @include outlineTemp;
+}
+
+@media (min-width: $tablet-width) {
+  .photo-filters {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photo-filters__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 310px;
+  }
+
+  .photo-filters__wrapper-icons {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    min-height: 210px;
+  }
+
+  .photo-filters__wrapper-range {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    min-height: 210px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .upload {
+    padding: 50px 120px;
+  }
+
+  .photo-filters__wrapper {
+    width: 470px;
+  }
+
+  .photo-filters__wrapper-icons {
+    width: 90px;
+    min-height: 210px;
+  }
+
+  .photo-filters__wrapper-range {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    min-height: 210px;
+  }
 }
