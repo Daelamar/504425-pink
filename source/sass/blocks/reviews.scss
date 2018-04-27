@@ -1,7 +1,18 @@
 .reviews {
   line-height: 2.1;
   background-color: #ffffff;
-  padding: 48px 20px 135px;
+  padding: 48px 20px;
+
+  @include outlineTemp;
+}
+
+.reviews__item {
+  display: none;
+  @include outlineTemp;
+
+  &--current {
+    display: block;
+  }
 }
 
 .reviews__title {
@@ -9,4 +20,27 @@
   line-height: 1.6;
   font-weight: 700;
   font-style: normal;
+}
+
+.reviews__profession {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__item {
+    &--current {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .reviews__profession {
+    display: inherit;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    padding: 180px 130px 48px;
+  }
 }

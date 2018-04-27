@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Photos</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
   <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="pink">
-    </a>
+    <div class="main-header__top-nav">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="pink">
+      </a>
+      <button class="main-header__button-menu" type="button" aria-label="Меню"></button>
+    </div>
     <nav class="main-nav">
-      <button class="main-nav__button" type="button" aria-label="Меню"></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a href="index.html" class="main-nav__item-link">Главная</a>
@@ -45,78 +49,91 @@
           width="320"
           height="137"
           class="user-post__image user-post__image--panorama">
-        <div class="user-post__wrapper"></div>
-        <p class="user-post__user-info">
-          <b class="user-post__name">Анна</b>
-          <time class="user-post__time" datetime="2018-04-17">(5&nbsp;минут назад)</time>
-        </p>
-        <figcaption class="user-post__comment">Прыгать или нет?
-          Напишите в&nbsp;коментарии свой совет и&nbsp;смотрите прямую трансляцию в&nbsp;перископе, задавайте свои
-          вопросы!
+        <figcaption class="user-post__wrapper">
+          <p class="user-post__user-info">
+            <b class="user-post__name">Анна</b>
+            <time class="user-post__time" datetime="2018-04-17">(5&nbsp;минут назад)</time>
+          </p>
+          <p class="user-post__comment">Прыгать или нет?
+            Напишите в&nbsp;коментарии свой совет и&nbsp;смотрите прямую трансляцию в&nbsp;перископе, задавайте свои
+            вопросы!
+          </p>
+          <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
+          <p class="user-post__likes">Нравится: 215</p>
         </figcaption>
-        <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
-        <p class="user-post__likes">Нравится: 215</p>
       </figure>
       <figure class="gallery__item user-post">
         <img src="http://placehold.it/280x180" alt="car" width="280" height="180" class="user-post__image">
-        <p class="user-post__user-info">
-          <b class="user-post__name">Левон</b>
-          <time class="user-post__time" datetime="2018-04-17">(5&nbsp;часов назад)</time>
-        </p>
-        <figcaption class="user-post__comment">Вчера он&nbsp;на&nbsp;луну летал, сегодня в&nbsp;руки к&nbsp;нам попал.
+        <figcaption class="user-post__wrapper">
+          <p class="user-post__user-info">
+            <b class="user-post__name">Левон</b>
+            <time class="user-post__time" datetime="2018-04-17">(5&nbsp;часов назад)</time>
+          </p>
+          <p class="user-post__comment">Вчера он&nbsp;на&nbsp;луну летал, сегодня в&nbsp;руки к&nbsp;нам попал.
+          </p>
+          <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
+          <p class="user-post__likes">Нравится: 356</p>
         </figcaption>
-        <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
-        <p class="user-post__likes">Нравится: 356</p>
       </figure>
       <figure class="gallery__item user-post">
         <img src="http://placehold.it/280x180" alt="drums" width="280" height="180" class="user-post__image">
-        <p class="user-post__user-info">
-          <b class="user-post__name">Антон</b>
-          <time class="user-post__time" datetime="2018-04-17">(12&nbsp;часов назад)</time>
-        </p>
-        <figcaption class="user-post__comment">Соседи будут рады!</figcaption>
-        <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
-        <p class="user-post__likes">Нравится: 666</p>
+        <figcaption class="user-post__wrapper">
+          <p class="user-post__user-info">
+            <b class="user-post__name">Антон</b>
+            <time class="user-post__time" datetime="2018-04-17">(12&nbsp;часов назад)</time>
+          </p>
+          <p class="user-post__comment">Соседи будут рады!</p>
+          <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
+          <p class="user-post__likes">Нравится: 666</p>
+        </figcaption>
       </figure>
       <figure class="gallery__item user-post">
         <img src="http://placehold.it/280x180" alt="sky" width="280" height="180" class="user-post__image">
-        <p class="user-post__user-info">
-          <b class="user-post__name">Борис</b>
-          <time class="user-post__time" datetime="2018-04-17">(20&nbsp;часов назад)</time>
-        </p>
-        <figcaption class="user-post__comment">Здесь могла быть ваша цитата о&nbsp;высоком и&nbsp;вечном.</figcaption>
-        <button class="user-post__button-heart" type="button" aria-label="like  the photo"></button>
-        <p class="user-post__likes">Нравится: 215</p>
+        <figcaption class="user-post__wrapper">
+          <p class="user-post__user-info">
+            <b class="user-post__name">Борис</b>
+            <time class="user-post__time" datetime="2018-04-17">(20&nbsp;часов назад)</time>
+          </p>
+          <p class="user-post__comment">Здесь могла быть ваша цитата о&nbsp;высоком и&nbsp;вечном.</p>
+          <button class="user-post__button-heart" type="button" aria-label="like  the photo"></button>
+          <p class="user-post__likes">Нравится: 215</p>
+        </figcaption>
       </figure>
       <figure class="gallery__item user-post">
         <img src="http://placehold.it/280x180" alt="market" width="280" height="180" class="user-post__image">
-        <p class="user-post__user-info">
-          <b class="user-post__name">Сергей</b>
-          <time class="user-post__time" datetime="2018-04-17">(25&nbsp;часов назад)</time>
-        </p>
-        <figcaption class="user-post__comment">Самая кубанская в&nbsp;мире!</figcaption>
-        <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
-        <p class="user-post__likes">Нравится: 4</p>
+        <figcaption class="user-post__wrapper">
+          <p class="user-post__user-info">
+            <b class="user-post__name">Сергей</b>
+            <time class="user-post__time" datetime="2018-04-17">(25&nbsp;часов назад)</time>
+          </p>
+          <p class="user-post__comment">Самая кубанская в&nbsp;мире!</p>
+          <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
+          <p class="user-post__likes">Нравится: 4</p>
+        </figcaption>
       </figure>
       <figure class="gallery__item user-post">
         <img src="http://placehold.it/280x180" alt="mountain" width="280" height="180" class="user-post__image">
-        <p class="user-post__user-info">
-          <b class="user-post__name">Максим</b>
-          <time class="user-post__time" datetime="2018-04-17">(40&nbsp;часов назад)</time>
-        </p>
-        <figcaption class="user-post__comment">Где снег&nbsp;то?</figcaption>
-        <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
-        <p class="user-post__likes">Нравится: 150</p>
+        <figcaption class="user-post__wrapper">
+          <p class="user-post__user-info">
+            <b class="user-post__name">Максим</b>
+            <time class="user-post__time" datetime="2018-04-17">(40&nbsp;часов назад)</time>
+          </p>
+          <p class="user-post__comment">Где снег&nbsp;то?</p>
+          <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
+          <p class="user-post__likes">Нравится: 150</p>
+        </figcaption>
       </figure>
       <figure class="gallery__item user-post">
         <img src="http://placehold.it/280x180" alt="plane" width="280" height="180" class="user-post__image">
-        <p class="user-post__user-info">
-          <b class="user-post__name">Надежда</b>
-          <time class="user-post__time" datetime="2018-04-17">(45&nbsp;часов назад)</time>
-        </p>
-        <figcaption class="user-post__comment">Всем GM&nbsp;и&nbsp;взаимные лайки!</figcaption>
-        <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
-        <p class="user-post__likes">Нравится: 2560</p>
+        <figcaption class="user-post__wrapper">
+          <p class="user-post__user-info">
+            <b class="user-post__name">Надежда</b>
+            <time class="user-post__time" datetime="2018-04-17">(45&nbsp;часов назад)</time>
+          </p>
+          <p class="user-post__comment">Всем GM&nbsp;и&nbsp;взаимные лайки!</p>
+          <button class="user-post__button-heart" type="button" aria-label="like the photo"></button>
+          <p class="user-post__likes">Нравится: 2560</p>
+        </figcaption>
       </figure>
     </section>
     <section class="upload">
@@ -129,58 +146,60 @@
           alt="uploaded photo"
           width="280"
           height="374">
-        <div class="photo-filters__wrapper photo-filters__wrapper-icons" aria-hidden="true">
-          <label for="harshness" class="visually-hidden">Резкость</label>
-          <input
-            class="photo-filters__radio photo-filters__radio--harshness"
-            type="radio"
-            name="filter"
-            id="harshness"
-            value="harshness">
-          <label for="contrast" class="visually-hidden">Контрастность</label>
-          <input
-            class="photo-filters__radio photo-filters__radio--contrast"
-            type="radio"
-            name="filter"
-            id="contrast"
-            value="contrast">
-          <label for="brightness" class="visually-hidden">Яркость</label>
-          <input
-            class="photo-filters__radio photo-filters__radio--brightness"
-            type="radio"
-            name="filter"
-            id="brightness"
-            value="brightness">
-        </div>
-        <div class="photo-filters__wrapper photo-filters__wrapper-range" aria-hidden="true">
-          <label for="value-contrast" class="visually-hidden">Диапазон значений</label>
-          <input
-            class="photo-filters__range"
-            type="range"
-            name="value-contrast"
-            id="value-contrast"
-            min="1"
-            max="100">
-          <label for="value-harshness" class="visually-hidden">Диапазон значений</label>
-          <input
-            class="photo-filters__range"
-            type="range"
-            name="value-harshness"
-            id="value-harshness"
-            min="1"
-            max="100">
-          <label for="value-brightness" class="visually-hidden">Диапазон значений</label>
-          <input
-            class="photo-filters__range"
-            type="range"
-            name="value-brightness"
-            id="value-brightness"
-            min="1"
-            max="100">
-        </div>
-        <div class="photo-filters__wrapper photo-filters__wrapper--buttons">
-          <button type="submit" class="button button--post">Запостить</button>
-          <button type="reset" class="button button--reset">Отмена</button>
+        <div class="photo-filters__wrapper">
+          <div class="photo-filters__wrapper-icons" aria-hidden="true">
+            <label for="harshness" class="visually-hidden">Резкость</label>
+            <input
+              class="photo-filters__radio photo-filters__radio--harshness"
+              type="radio"
+              name="filter"
+              id="harshness"
+              value="harshness">
+            <label for="contrast" class="visually-hidden">Контрастность</label>
+            <input
+              class="photo-filters__radio photo-filters__radio--contrast"
+              type="radio"
+              name="filter"
+              id="contrast"
+              value="contrast">
+            <label for="brightness" class="visually-hidden">Яркость</label>
+            <input
+              class="photo-filters__radio photo-filters__radio--brightness"
+              type="radio"
+              name="filter"
+              id="brightness"
+              value="brightness">
+          </div>
+          <div class="photo-filters__wrapper-range" aria-hidden="true">
+            <label for="value-contrast" class="visually-hidden">Диапазон значений</label>
+            <input
+              class="photo-filters__range"
+              type="range"
+              name="value-contrast"
+              id="value-contrast"
+              min="1"
+              max="100">
+            <label for="value-harshness" class="visually-hidden">Диапазон значений</label>
+            <input
+              class="photo-filters__range"
+              type="range"
+              name="value-harshness"
+              id="value-harshness"
+              min="1"
+              max="100">
+            <label for="value-brightness" class="visually-hidden">Диапазон значений</label>
+            <input
+              class="photo-filters__range"
+              type="range"
+              name="value-brightness"
+              id="value-brightness"
+              min="1"
+              max="100">
+          </div>
+          <div class="photo-filters__wrapper--buttons">
+            <button type="submit" class="button button--post">Запостить</button>
+            <button type="reset" class="button button--reset">Отмена</button>
+          </div>
         </div>
       </form>
     </section>

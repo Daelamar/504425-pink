@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Конкурс</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
   <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="pink">
-    </a>
+    <div class="main-header__top-nav">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="pink">
+      </a>
+      <button class="main-header__button-menu" type="button" aria-label="Меню"></button>
+    </div>
     <nav class="main-nav">
-      <button class="main-nav__button" type="button" aria-label="Меню"></button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a href="index.html" class="main-nav__item-link">Главная</a>
@@ -38,7 +42,7 @@
       <p class="form__caption">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000
         миль на&nbsp;вашу
         бонусную карту!</p>
-      <form action="https://echo.htmlacademy.ru/" method="post">
+      <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__field">
           <ul class="form__list">
             <li class="form__item">
@@ -175,9 +179,11 @@
           <textarea name="comment" id="comment"
                     placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
-        <button type="submit" class="button button--form">Отправить форму</button>
+        <div class="form__footer">
+          <button type="submit" class="button button--form">Отправить форму</button>
+          <p class="form__warning">* &mdash; обязательные поля</p>
+        </div>
       </form>
-      <p class="form__warning">* &mdash; обязательные поля</p>
     </section>
   </main>
   <footer class="main-footer">

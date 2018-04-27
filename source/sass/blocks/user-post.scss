@@ -20,3 +20,27 @@
   font-weight: 300;
   text-transform: uppercase;
 }
+
+.user-post__wrapper {
+  padding: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .user-post {
+    width: 48%;
+
+    &--panorama {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-post {
+    width: 30%;
+
+    &--panorama {
+      width: 100%;
+    }
+  }
+}

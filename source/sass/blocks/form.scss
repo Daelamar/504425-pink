@@ -1,10 +1,13 @@
 .form {
+  padding: 50px 20px 0;
   background-color: #ffffff;
 }
 
 .form__field {
   padding: 40px 20px;
   border: none;
+
+  @include outlineTemp;
 
   .form__legend {
     line-height: 1.2;
@@ -34,4 +37,41 @@
 .form__input {
   font-size: 18px;
   line-height: 1.6;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    padding: 90px 20px 0;
+  }
+
+  .form__field {
+    &:nth-child(even) {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.form__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    padding: 90px 120px 0;
+  }
+
+  .form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__field {
+    width: 100%;
+
+    &:first-child,
+    &:nth-child(2) {
+      width: 49.5%;
+    }
+  }
 }

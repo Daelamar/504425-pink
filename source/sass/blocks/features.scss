@@ -1,10 +1,15 @@
 .features {
-  padding: 45px 20px 320px;
   background: #f2f2f2 url("../../img/iphone-screen-mobile@1x.png") no-repeat center bottom;
+  min-height: 1000px; /*временно*/
+
+  @include outlineTemp;
 }
 
 .features__header {
+  padding: 40px 20px;
   background-color: #ffffff;
+
+  @include outlineTemp;
 }
 
 .features__title,
@@ -17,4 +22,45 @@
   font-size: 18px;
   line-height: 1.6;
   font-weight: 700;
+}
+
+.feature-list {
+  @include listStyle;
+  @include outlineTemp;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    min-height: 730px; /*временно*/
+    background-position: 50px bottom;
+  }
+
+  .features__header {
+    padding: 50px 20px 40px;
+  }
+
+  .feature-list {
+    margin-left: auto;
+    padding: 75px 20px 45px 10px;
+    width: 340px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    min-height: 850px; /*временно*/
+    background: #f2f2f2;
+  }
+
+  .features__header {
+    padding: 70px 190px;
+  }
+
+  .feature-list {
+    display: flex;
+    margin-top: auto;
+    padding: 350px 190px 70px;
+    width: auto;
+    background: url("../../img/iphone-screen-mobile@1x.png") no-repeat 230px top, url("../../img/iphone-screen-mobile@1x.png") no-repeat center top, url("../../img/iphone-screen-mobile@1x.png") no-repeat 810px top;
+  }
 }
