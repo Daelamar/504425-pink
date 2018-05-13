@@ -1,25 +1,60 @@
+@import "../global/variables";
+@import "../global/mixins";
+
 .prices {
-  padding: 0 20px 45px;
+  padding: 90px 0 45px;
   line-height: 2.1;
   text-transform: uppercase;
-  background-color: #f2f2f2;
+  background: #f2f2f2 url("../../img/bg-triangle-white.svg") no-repeat 0 -70px;
+}
 
-  @include outlineTemp;
+.prices__wrapper {
+  display: flex;
+  width: 834px;
+  transform: translateX(-257px);
 }
 
 .prices__item {
-  @include outlineTemp;
-  display: none;
-  &--current {
-    display: block;
+  width: 278px;
+  border: 1px solid #f2f2f2;
+
+  &--tarif {
+    display: none;
   }
 }
 
 .prices__header {
+  padding: 18px 20px 20px;
+  text-align: center;
   background-color: #283645;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+
+  &--tarif {
+    min-height: 80px;
+    background-color: transparent;
+    border: none;
+  }
+
+  &--hit {
+    position: relative;
+
+    &::after {
+      content: "";
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      background: url("../../img/bg-hit.svg") no-repeat;
+      z-index: 1;
+    }
+  }
 }
 
 .prices__title {
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   line-height: 1.6;
   font-weight: 700;
@@ -27,33 +62,182 @@
 }
 
 .prices__hit {
+  position: absolute;
+  top: 12px;
+  left: 8px;
   color: #ffffff;
+  line-height: 2.1;
+  transform: rotate(-45deg);
+  z-index: 2;
 }
 
 .prices__cost {
+  margin: 4px 0 0;
+  padding: 0;
   font-size: 24px;
   line-height: 1.2;
   font-weight: 300;
   color: #ffffff;
 }
 
+.prices__content-list {
+  @include listStyle;
+}
+
+.prices__content-item {
+  padding: 15px 22px;
+  background: #ffffff url("../../img/icon-yes.svg") no-repeat 94% 50%;
+  background-size: 32px 22px;
+  border: 1px solid #f2f2f2;
+
+  &--not-bundle {
+    background: #ffffff url("../../img/icon-no.svg") no-repeat 93% 47%;
+    background-size: 27px 26px;
+  }
+}
+
+//todo:Таблетка
+
 @media (min-width: $tablet-width) {
   .prices {
-    padding: 70px 20px;
+    padding: 86px 20px 65px;
+    background: #f2f2f2 url("../../img/bg-triangle-white.svg") no-repeat 0 -42px;
   }
 
   .prices__wrapper {
     display: flex;
+    width: 620px;
+    transform: translateX(0);
   }
 
   .prices__item {
     display: block;
-    width: 33.33%;
+    width: 155px;
+
+    &--tarif .prices__content-item {
+      text-transform: none;
+      background: #ffffff;
+    }
+  }
+
+  .prices__header {
+    padding: 12px 20px;
+
+    &--hit {
+      &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: url("../../img/bg-hit-tablet.svg") no-repeat;
+        z-index: 1;
+      }
+    }
+  }
+
+  .prices__hit {
+    top: 4px;
+    left: 6px;
+  }
+
+  .prices__title {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .prices__cost {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .prices__content-item {
+    padding: 6px 15px;
+    min-height: 47px;
+    background: #ffffff url("../../img/icon-yes.svg") no-repeat 50% 38%;
+    background-size: 32px 22px;
+
+    &--not-bundle {
+      background: #ffffff url("../../img/icon-no.svg") no-repeat 50% 38%;
+      background-size: 27px 26px;
+    }
+  }
+
+  .prices__description {
+    display: none;
   }
 }
 
-@media (min-width: $desktop-width){
+//todo:Деск
+
+@media (min-width: $desktop-width) {
   .prices {
-    padding: 100px 120px;
+    padding: 144px 126px 95px;
+    background: #f2f2f2 url("../../img/bg-triangle-white.svg") no-repeat -1px 0;
+  }
+
+  .prices__wrapper {
+    width: 946px;
+  }
+
+  .prices__item {
+    width: 237px;
+  }
+
+  .prices__header {
+    padding: 16px 20px 18px;
+
+    &--tarif {
+      min-height: 94px;
+    }
+
+    &--hit {
+      &::after {
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 74px;
+        height: 74px;
+        background: url("../../img/bg-hit-tablet.svg") no-repeat;
+        background-size: 100%;
+        z-index: 1;
+      }
+    }
+  }
+
+  .prices__hit {
+    top: 10px;
+    left: 12px;
+  }
+
+  .prices__title {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .prices__cost {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .prices__content-item {
+    padding: 15px 25px;
+    font-size: 18px;
+    line-height: 1.6;
+    min-height: 61px;
+    background: #ffffff url("../../img/icon-yes.svg") no-repeat 50% 55%;
+    background-size: 30px 22px;
+
+    &--not-bundle {
+      background: #ffffff url("../../img/icon-no.svg") no-repeat 50% 55%;
+      background-size: 26px 26px;
+    }
+  }
+
+  .prices__description {
+    display: none;
   }
 }

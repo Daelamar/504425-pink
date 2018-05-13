@@ -1,12 +1,65 @@
+@import "../global/variables";
+@import "../global/mixins";
+
 .user-post {
-  margin: 0;
+  margin: 0 0 20px;
   background-color: #f2f2f2;
+
+  &--panorama {
+    position: relative;
+  }
+}
+
+.user-post__image-link {
+  font-size: 0;
+  display: inherit;
 }
 
 .user-post__image {
   &--panorama {
     margin-left: -20px;
   }
+}
+
+.user-post__label {
+  position: absolute;
+  top: 0;
+  padding: 6px 20px;
+  right: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #d22856;
+}
+
+.user-post__wrapper {
+  padding: 18px 18px 21px;
+}
+
+.user-post__user-info {
+  margin: 0;
+  padding: 0;
+}
+
+.user-post__comment {
+  margin: 2px 0 0;
+  line-height: 1.75;
+}
+
+.user-post__wrapper-heart {
+  margin: 12px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-post__button-heart {
+  width: 13px;
+  height: 12px;
+  background: transparent url("../../img/icon-heart.svg") no-repeat center;
+  border: none;
 }
 
 .user-post__time {
@@ -16,31 +69,123 @@
 }
 
 .user-post__likes {
+  margin: 0 0 0 19px;
+  padding: 0;
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-.user-post__wrapper {
-  padding: 20px;
-}
+//todo:Таблетка
 
 @media (min-width: $tablet-width) {
   .user-post {
-    width: 48%;
+    margin: 0 0 54px;
+    width: 300px;
 
     &--panorama {
+      margin: 0 0 50px;
       width: 100%;
+
+      .user-post__wrapper {
+        padding: 24px 28px 21px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        min-height: 120px;
+      }
+
+      .user-post__user-info {
+        order: -2;
+      }
+
+      .user-post__wrapper-heart {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 120px;
+        order: -1;
+      }
+
+      .user-post__likes {
+        margin: 0;
+      }
+    }
+  }
+
+  .user-post__image {
+    width: 300px;
+    height: 300px;
+
+    &--panorama {
+      width: 660px;
+      height: 510px;
+    }
+  }
+
+  .user-post__label {
+    top: 58px;
+    right: 0;
+  }
+
+  .user-post__wrapper {
+    padding: 25px 32px 25px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 155px;
+  }
+
+  .user-post__comment {
+    margin: 0;
+  }
+
+  .user-post__wrapper-heart {
+    margin: auto 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .user-post__likes {
+      margin: 0;
+      order: -1;
     }
   }
 }
 
+//todo:Таблетка
+
 @media (min-width: $desktop-width) {
   .user-post {
-    width: 30%;
-
     &--panorama {
       width: 100%;
+
+      .user-post__wrapper {
+        min-height: 96px;
+      }
     }
+  }
+
+  .user-post__image {
+    width: 300px;
+    height: 400px;
+
+    &--panorama {
+      margin-left: -130px;
+      width: 1200px;
+      height: 506px;
+    }
+  }
+
+  .user-post__label {
+    top: 52px;
+  }
+
+  .user-post__wrapper {
+    padding: 25px 32px 25px 28px;
+    min-height: 155px;
   }
 }

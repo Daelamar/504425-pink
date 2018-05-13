@@ -1,27 +1,59 @@
-.gallery {
-  padding: 50px 20px 0;
+@import "../global/variables";
+@import "../global/mixins";
 
-  @include outlineTemp;
+.gallery {
+  padding: 30px 20px 0;
+  text-align: center;
+}
+
+.gallery__wrapper {
+  padding: 35px 0 0;
+  text-align: left;
 }
 
 .gallery__caption {
-  line-height: 2.1;
+  line-height: 2.2;
 }
 
-.gallery__item {
-  @include outlineTemp;
-}
+//todo:Таблетка
 
 @media (min-width: $tablet-width) {
   .gallery {
+    padding: 75px 20px 0;
+  }
+
+  .gallery__wrapper {
+    padding: 60px 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  .gallery__caption {
+    padding: 0 25px 0;
+    font-size: 18px;
+    line-height: 1.6;
+
+    & br {
+      display: none;
+    }
+  }
 }
+
+//todo:Деск
 
 @media (min-width: $desktop-width) {
   .gallery {
-    padding: 50px 120px 0;
+    padding: 76px 130px 0;
+  }
+
+  .gallery__caption {
+    & br {
+      display: inline;
+    }
+  }
+
+  .gallery__wrapper {
+    padding: 72px 0 0;
   }
 }

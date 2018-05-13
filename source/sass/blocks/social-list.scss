@@ -1,0 +1,42 @@
+@import "../global/variables";
+@import "../global/mixins";
+
+.social-list {
+  @include listStyle;
+  margin: 38px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.social-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+}
+
+.social-list__link {
+  fill: #d22856;
+}
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    margin: 0 0 0 75px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 180px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social-list {
+    margin: 5px 0 0 13px;
+  }
+}

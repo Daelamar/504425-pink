@@ -1,40 +1,118 @@
-.main-header {
-  background-color: $color-header;
+@import "../global/variables";
+@import "../global/mixins";
 
-  @include outlineTemp;
+.main-header {
+  position: relative;
+  margin-bottom: -$height-topNavMob;
+  z-index: 3;
 }
 
 .main-header__top-nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 20px;
-  min-height: 65px; /*временно*/
+  min-height: $height-topNavMob;
+  background-color: #283645;
+  border-bottom: 1px solid #000000;
 
-  @include outlineTemp;
-}
-
-.main-header__logo-image {
-  min-height: 22px; /*временно*/
-
-  @include outlineTemp;
+  &--closed {
+    background-color: rgba(29, 38, 49, 0.5);
+    border-bottom: none;
+  }
 }
 
 .main-header__button-menu {
-  width: 50px;
-  height: 25px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 70px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
-  @include outlineTemp;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: -5px;
+    width: 32px;
+    height: 4px;
+    background-color: #ffffff;
+    transition-duration: .3s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
+
+.main-header__top-nav--closed .main-header__button-menu {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 -10px 0 0 #ffffff, 0 10px 0 0 #ffffff, 0 -9px 0 -2px #4b4f52, 0 9px 0 -2px #4b4f52;
+    transform: none;
+  }
+
+  &::after {
+    top: 0;
+    right: 5px;
+    transform: rotate(0deg);
+  }
+}
+
+//todo:Таблетка
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    margin-bottom: -$height-topNavTab;
+  }
+
+  .main-header__top-nav {
+    align-items: center;
+    padding: 25px 20px;
+    min-height: $height-topNavTab;
+  }
+
+  .main-header__button-menu {
+    margin-top: 7px;
+  }
+}
+
+//todo:Деск
 
 @media (min-width: $desktop-width) {
   .main-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 130px;
+    padding: 0 130px;
     min-height: 110px;
+    background-color: rgba(29, 38, 49, 0.5);
   }
 
   .main-header__button-menu {
     display: none;
+  }
+
+  .main-header__top-nav {
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  .main-header__button-menu {
+    background-color: transparent;
   }
 }

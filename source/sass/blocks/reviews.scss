@@ -1,14 +1,16 @@
+@import "../global/variables";
+@import "../global/mixins";
+
 .reviews {
+  padding: 40px 20px;
   line-height: 2.1;
   background-color: #ffffff;
-  padding: 48px 20px;
-
-  @include outlineTemp;
 }
 
 .reviews__item {
+  margin: 0;
   display: none;
-  @include outlineTemp;
+  text-align: center;
 
   &--current {
     display: block;
@@ -17,8 +19,8 @@
 
 .reviews__title {
   font-size: 18px;
-  line-height: 1.6;
   font-weight: 700;
+  line-height: 1.6;
   font-style: normal;
 }
 
@@ -27,6 +29,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .reviews {
+    padding: 40px 20px 20px;
+  }
+
   .reviews__item {
     &--current {
       display: flex;
@@ -34,13 +40,39 @@
     }
   }
 
+  .reviews__username-wrapper {
+    margin: 21px 0 0 0;
+  }
+
+  .reviews__title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .reviews__description {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
   .reviews__profession {
+    margin: 0;
     display: inherit;
+    line-height: 2.1;
   }
 }
 
 @media (min-width: $desktop-width) {
   .reviews {
-    padding: 180px 130px 48px;
+    padding: 172px 218px 48px;
+  }
+
+  .reviews__title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .reviews__profession {
+    font-size: 18px;
+    line-height: 1.6;
   }
 }

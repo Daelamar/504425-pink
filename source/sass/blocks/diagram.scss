@@ -1,34 +1,95 @@
+@import "../global/variables";
+@import "../global/mixins";
+
 .diagram {
   display: none;
-  padding: 80px 20px 80px;
-
-  @include outlineTemp;
+  padding: 40px 20px 0;
 }
 
 .diagram__wrapper {
-  margin-left: auto;
-  width: 310px;
+  padding: 56px 0 0 9px;
+  width: 320px;
+}
 
-  @include outlineTemp;
+.diagram__clock-wrapper {
+  padding: 0 0 0 64px;
+  width: 300px;
+  background: url("../../img/icon-editor-diagram-fill.svg") no-repeat 18px 72px, url("../../img/icon-timer.svg") no-repeat 0 18px;
+  background-size: 204px 204px, 240px 276px;
+}
+
+.diagram__hours {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #d22856;
 }
 
 .diagram__title {
+  margin: 0;
+  padding: 0;
   font-size: 30px;
   line-height: 1.2;
 }
 
+.diagram__description {
+  margin: 10px 0 14px;
+  padding: 0;
+}
+
 .diagram__link {
+  color: #d22856;
   text-decoration: underline;
 }
 
 @media (min-width: $tablet-width) {
   .diagram {
     display: flex;
+    justify-content: space-between;
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
+  .diagram {
+    padding: 6px 120px 10px;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+  }
+
   .diagram__wrapper {
-    width: 550px;
+    padding: 115px 0 0 0;
+    width: 585px;
+  }
+
+  .diagram__hours {
+    font-size: 120px;
+    line-height: 1.5;
+  }
+
+  .diagram__title {
+    line-height: 1;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .diagram__description {
+    margin: 22px 0 33px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .diagram__link {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .diagram__clock-wrapper {
+    padding: 0 0 0 90px;
+    width: 345px;
+    background: url("../../img/icon-editor-diagram-fill.svg") no-repeat 32px 90px, url("../../img/icon-timer.svg") no-repeat 10px 20px;
+    background-size: 252px 252px, 300px 345px;
   }
 }
