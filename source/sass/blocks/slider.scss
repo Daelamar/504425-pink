@@ -1,6 +1,101 @@
-.slider__control {
-  margin: 0 auto;
-  width: 70px;
+@import "../global/variables";
+@import "../global/mixins";
 
-  @include outlineTemp;
+.slider {
+  &--overflow {
+    width: 320px;
+    overflow: hidden;
+  }
+}
+
+.slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider__control {
+  margin: 33px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 68px;
+}
+
+.slider__toggle {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    background-color: #bec2c7;
+    border: none;
+    border-radius: 50%;
+  }
+
+  &--current {
+    &::after {
+      width: 12px;
+      height: 12px;
+      top: 4px;
+      left: 4px;
+      background-color: #ffffff;
+      border: 3px solid #283645;
+      cursor: auto;
+    }
+  }
+
+  &:hover {
+    &::after {
+      background-color: #7e868f;
+    }
+
+    &:active {
+      &::after {
+        background-color: #e9ebec;
+      }
+    }
+  }
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .slider {
+    &--overflow {
+      width: 100%;
+      overflow: inherit;
+    }
+  }
+
+  .slider__item {
+    &--current {
+      display: flex;
+    }
+  }
+
+  .slider__control {
+    &--hide {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__control {
+    display: none;
+  }
 }

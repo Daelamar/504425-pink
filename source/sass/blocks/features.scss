@@ -1,66 +1,125 @@
-.features {
-  background: #f2f2f2 url("../../img/iphone-screen-mobile@1x.png") no-repeat center bottom;
-  min-height: 1000px; /*временно*/
+@import "../global/variables";
+@import "../global/mixins";
 
-  @include outlineTemp;
+.features {
+  background-color: #ffffff;
 }
 
 .features__header {
-  padding: 40px 20px;
+  @include container;
+  padding: 14px 20px;
+  text-align: center;
+  line-height: 1.3;
   background-color: #ffffff;
-
-  @include outlineTemp;
 }
 
-.features__title,
+.features__container {
+  background: #f2f2f2 url("../../img/bg-triangle-white.svg") no-repeat 50% 0;
+  background-size: 101% auto;
+}
+
+.features__header-title,
 .features__caption {
+  margin: 24px 0;
   font-size: 24px;
   font-weight: 300;
 }
 
-.feature-list__title {
+.features__title {
+  margin: 0;
   font-size: 18px;
   line-height: 1.6;
   font-weight: 700;
 }
 
-.feature-list {
+.features__list {
   @include listStyle;
-  @include outlineTemp;
+  @include container;
+  padding: 55px 20px 310px;
+  background: url("../../img/iphone-screen-mobile@1x.png") no-repeat center 500px;
 }
+
+.features__list-item {
+  padding: 18px 0 14px;
+  text-align: center;
+}
+
+.features__description {
+  margin: 10px 0 0;
+}
+
+//Таблетка
 
 @media (min-width: $tablet-width) {
-  .features {
-    min-height: 730px; /*временно*/
-    background-position: 50px bottom;
-  }
-
   .features__header {
-    padding: 50px 20px 40px;
+    padding: 49px 20px 46px;
   }
 
-  .feature-list {
-    margin-left: auto;
-    padding: 75px 20px 45px 10px;
-    width: 340px;
+  .features__header-title,
+  .features__caption {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+
+  .features__caption {
+    padding: 0 20px;
+  }
+
+  .features__list {
+    padding: 56px 20px 28px 329px;
+    background: url("../../img/iphone-screen-mobile@1x.png") no-repeat 20px 6px, url("../../img/bg-triangle-white.svg") no-repeat 0 -42px;
+    background-size: 40%, auto;
+  }
+
+  .features__list-item {
+    padding: 18px 0 17px;
+    text-align: left;
   }
 }
 
+//Деск
+
 @media (min-width: $desktop-width) {
-  .features {
-    min-height: 850px; /*временно*/
-    background: #f2f2f2;
-  }
-
   .features__header {
-    padding: 70px 190px;
+    padding: 68px 190px 72px;
   }
 
-  .feature-list {
+  .features__header-title,
+  .features__caption {
+    font-size: 50px;
+  }
+
+  .features__caption {
+    padding: 0 55px;
+  }
+
+  .features__list {
+    @include container;
     display: flex;
-    margin-top: auto;
-    padding: 350px 190px 70px;
+    padding: 360px 120px 40px;
     width: auto;
-    background: url("../../img/iphone-screen-mobile@1x.png") no-repeat 230px top, url("../../img/iphone-screen-mobile@1x.png") no-repeat center top, url("../../img/iphone-screen-mobile@1x.png") no-repeat 810px top;
+    background: url("../../img/iphone-screen-mobile@1x.png") no-repeat 230px top, url("../../img/iphone-screen-mobile@1x.png") no-repeat center top, url("../../img/iphone-screen-mobile@1x.png") no-repeat 810px top, url("../../img/bg-triangle-white.svg") no-repeat -1px 0;
+  }
+
+  .features__title {
+    padding: 0 10px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .features__list-item {
+    padding: 0 30px;
+    width: 33.33%;
+    text-align: center;
+  }
+
+  .features__description {
+    margin: 24px 0 0;
+    font-size: 18px;
+    line-height: 1.7;
   }
 }

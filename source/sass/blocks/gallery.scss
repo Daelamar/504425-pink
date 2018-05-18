@@ -1,27 +1,76 @@
+@import "../global/variables";
+@import "../global/mixins";
+
 .gallery {
-  padding: 50px 20px 0;
-
-  @include outlineTemp;
-}
-
-.gallery__caption {
-  line-height: 2.1;
+  padding: 30px 0 0;
+  text-align: center;
 }
 
 .gallery__item {
-  @include outlineTemp;
+  margin: 0 0 18px;
 }
+
+.gallery__header {
+  @include container;
+}
+
+.gallery__wrapper {
+  @include container;
+  padding: 0 20px 0;
+}
+
+.gallery__caption {
+  line-height: 2.2;
+}
+
+//Таблетка
 
 @media (min-width: $tablet-width) {
   .gallery {
+    padding: 75px 0 0;
+  }
+
+  .gallery__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  .gallery__header {
+    width: 620px;
+  }
+
+  .gallery__caption {
+    padding: 0 25px 0;
+    font-size: 18px;
+    line-height: 1.6;
+
+    br {
+      display: none;
+    }
+  }
 }
 
+//Деск
+
 @media (min-width: $desktop-width) {
-  .gallery {
-    padding: 50px 120px 0;
+  .gallery__header {
+    width: 940px;
+  }
+
+  .gallery__item {
+    margin: 0 0 51px;
+  }
+
+  .gallery__caption {
+    width: 100%;
+
+    br {
+      display: inline;
+    }
+  }
+
+  .gallery__wrapper {
+    padding: 0 130px 0;
   }
 }

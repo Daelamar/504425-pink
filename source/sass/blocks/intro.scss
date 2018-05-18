@@ -1,45 +1,226 @@
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 25px 20px 35px;
-  color: #ffffff;
+@import "../global/variables";
+@import "../global/mixins";
 
-  background: $color-header url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+.intro {
+  padding: 100px 20px 56px;
+  color: #ffffff;
+  background: $color-header url("/img/bg-back-mobile@1x.jpg") no-repeat center top;
+  background-size: cover;
 
   &--main {
-    min-height: 670px; /*временно*/
-    background: url("../../img/iphone-hand-mobile@1x.png") no-repeat 0 150px, url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
-    background-color: $color-header;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 465px 0 0;
+    background: $color-header url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+    background-size: cover;
+  }
+
+  &--photo {
+    padding: 100px 20px 84px;
   }
 }
 
 .intro__title {
+  margin: 0 auto;
+  width: 250px;
+  text-align: center;
   font-size: 24px;
   font-weight: 300;
-}
+  line-height: 1.2;
 
-.intro__wrapper {
-  margin-right: auto;
-  @include outlineTemp;
-}
-
-@media (min-width: $tablet-width) {
-  .intro {
-
-    &--main {
-      min-height: 630px; /*временно*/
-      background: url("../../img/iphone-hand-mobile@1x.png") no-repeat 85% 100%, url("../../img/bg-back-mobile@1x.jpg") no-repeat;
-      background-size: auto, cover;
-    }
+  &--main {
+    display: none;
   }
 }
 
+.intro__wrapper {
+  @include container;
+  position: relative;
+  text-align: center;
+  margin-right: auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -316px;
+    left: 0;
+    display: block;
+    width: 258px;
+    height: 286px;
+    background: url("../../img/iphone-hand-mobile@1x.png") no-repeat 0 bottom;
+    background-size: 258px 286px;
+  }
+}
+
+.intro__container {
+  padding: 30px 0 32px;
+  min-height: 270px;
+  background-color: $color-header;
+}
+
+.intro__button-download {
+  display: inline-block;
+  padding: 14px 35px;
+  text-transform: none;
+  border: 3px solid #ffffff;
+  border-radius: 35px;
+
+  &:hover {
+    color: #d22856;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: #f2ced5;
+  }
+}
+
+.intro__store-list {
+  @include listStyle;
+  margin: 31px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 206px;
+}
+
+.intro__caption {
+  width: 240px;
+  margin: 18px auto 0;
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .intro {
+    padding: 180px 0 79px;
+    background-size: cover;
+
+    &--main {
+      padding: 203px 20px 0;
+      background: $color-header url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+      background-size: 1200px auto;
+    }
+
+    &--photo {
+      padding: 180px 20px 139px;
+    }
+  }
+
+  .intro__title {
+    width: 520px;
+    font-size: 50px;
+
+    &--main {
+      margin: 0 0 33px 0;
+      display: block;
+      width: 300px;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+  }
+
+  .intro__container {
+    @include container;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .intro__wrapper {
+    margin: 0 auto 0 0;
+    padding: 0 20px 110px;
+    width: 340px;
+    background-color: transparent;
+    z-index: 2;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 170px;
+      display: block;
+      width: 470px;
+      height: 540px;
+      background: url("../../img/iphone-hand-mobile@1x.png") no-repeat 0 bottom;
+      background-size: 470px 540px;
+      z-index: -1;
+    }
+  }
+
+  .intro__button-download {
+    padding: 13px 45px;
+  }
+
+  .intro__store-list {
+    margin: 45px auto 0;
+  }
+
+  .intro__caption {
+    margin: 33px 0 0;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+}
+
+//Деск
+
 @media (min-width: $desktop-width) {
   .intro {
-    padding: 110px;
+    padding: 172px 0 101px;
+
     &--main {
-      min-height: 730px; /*временно*/
+      padding: 218px 0 0;
+      background: $color-header url("../../img/bg-back-mobile@1x.jpg") no-repeat center top;
+      background-size: 1980px auto;
     }
+  }
+
+  .intro__wrapper {
+    margin: 0 auto 0 0;
+    padding: 0 65px 123px 130px;
+    width: 500px;
+    background-color: transparent;
+    z-index: 2;
+
+    &::before {
+      left: 480px;
+    }
+  }
+
+  .intro__title {
+    width: 820px;
+    font-size: 50px;
+
+    &--main {
+      width: 300px;
+      margin: 0 0 52px 0;
+      font-size: 50px;
+    }
+
+    &--photo {
+      width: 500px;
+    }
+  }
+
+  .intro__button-download {
+    padding: 13px 28px;
+    font-size: 21px;
+  }
+
+  .intro__store-list {
+    margin: 66px auto 0;
+  }
+
+  .intro__caption {
+    margin: 51px auto 0;
   }
 }

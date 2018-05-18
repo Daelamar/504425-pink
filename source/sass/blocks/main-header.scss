@@ -1,40 +1,157 @@
-.main-header {
-  background-color: $color-header;
+@import "../global/variables";
+@import "../global/mixins";
 
-  @include outlineTemp;
+.main-header {
+  position: relative;
+  margin-bottom: -$height-topNavMob;
+  z-index: 3;
+  background-color: #283645;
+
+  &--closed {
+    background-color: rgba(29, 38, 49, 0.5);
+    border-bottom: none;
+
+    .main-header__button-menu {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 50px;
+        height: 4px;
+        background-color: #ffffff;
+        box-shadow: 0 -10px 0 0 #ffffff, 0 10px 0 0 #ffffff, 0 -9px 0 -2px #4b4f52, 0 9px 0 -2px #4b4f52;
+        transform: none;
+      }
+
+      &::after {
+        top: 0;
+        right: 5px;
+        transform: rotate(0deg);
+      }
+
+      &:hover {
+        &::before {
+          background-color: #d22856;
+          box-shadow: 0 -10px 0 0 #d22856, 0 10px 0 0 #d22856, 0 -9px 0 -2px #4b4f52, 0 9px 0 -2px #4b4f52;
+        }
+
+        &::after {
+          background-color: #d22856;
+        }
+      }
+
+      &:active {
+        &::before {
+          background-color: #5e354e;
+          box-shadow: 0 -10px 0 0 #5e354e, 0 10px 0 0 #5e354e, 0 -9px 0 -2px #4b4f52, 0 9px 0 -2px #4b4f52;
+        }
+
+        &::after {
+          background-color: #5e354e;
+        }
+      }
+    }
+  }
 }
 
 .main-header__top-nav {
+  @include container;
   display: flex;
   justify-content: space-between;
   padding: 20px 20px;
-  min-height: 65px; /*временно*/
-
-  @include outlineTemp;
-}
-
-.main-header__logo-image {
-  min-height: 22px; /*временно*/
-
-  @include outlineTemp;
 }
 
 .main-header__button-menu {
-  width: 50px;
-  height: 25px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 70px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
-  @include outlineTemp;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: -5px;
+    width: 32px;
+    height: 4px;
+    background-color: #ffffff;
+    transition-duration: 0.3s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: #d22856;
+    }
+
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: #5e354e;
+    }
+
+  }
 }
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    margin-bottom: -$height-topNavTab;
+  }
+
+  .main-header__top-nav {
+    align-items: center;
+    padding: 37px 20px;
+  }
+
+  .main-header__button-menu {
+    margin-top: 7px;
+  }
+}
+
+//Деск
 
 @media (min-width: $desktop-width) {
   .main-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 130px;
     min-height: 110px;
+    background-color: rgba(29, 38, 49, 0.5);
+  }
+
+  .main-header__container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 130px;
+    width: 1200px;
   }
 
   .main-header__button-menu {
     display: none;
+  }
+
+  .main-header__top-nav {
+    width: auto;
+    margin: 0;
+    background-color: transparent;
+    border: none;
   }
 }

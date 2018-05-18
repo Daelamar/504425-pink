@@ -1,31 +1,89 @@
+@import "../global/variables";
+@import "../global/mixins";
+
 .main-nav {
   font-size: 18px;
   line-height: 1.7;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: $color-header;
+  border-top: 1px solid #000000;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__list {
   @include listStyle;
-  min-height: 255px; /*временно*/
 }
 
-.main-nav__item {
-  min-height: 65px; /*временно*/
-  @include outlineTemp;
+.main-nav__item-link {
+  padding: 16px 0;
+  display: block;
+  text-align: center;
+  background-color: #283645;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;
+
+  &:hover {
+    color: #d22856;
+  }
+
+  &:active {
+    color: #6c324a;
+  }
 }
+
+//Деск
 
 @media (min-width: $desktop-width) {
-  .main-header__top-nav {
-    padding: 0;
+  .main-nav {
+    padding: 30px 0;
+    line-height: 1;
+    font-weight: normal;
+    text-transform: none;
+    border: none;
+
+    &--closed {
+      display: block;
+    }
   }
 
   .main-nav__list {
     display: flex;
+    flex-wrap: wrap;
+    width: 620px;
     flex-grow: 1;
     justify-content: space-between;
-    min-height: inherit; /*временно*/
+  }
+
+  .main-nav__item {
+    position: relative;
+
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 4px;
+        left: 0;
+        height: 2px;
+        background: #ffffff;
+      }
+    }
+  }
+
+  .main-nav__item-link {
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      color: #d22856;
+    }
+
+    &:active {
+      color: #82888e;
+    }
   }
 }

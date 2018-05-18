@@ -1,0 +1,53 @@
+@import "../global/variables";
+@import "../global/mixins";
+
+.social-list {
+  @include listStyle;
+  margin: 38px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 53px;
+  height: 53px;
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+  fill: #d22856;
+
+  &:hover {
+    border: 3px solid #2f3c4b;
+  }
+
+  &:active {
+    border: 3px solid #d22856;
+    fill: #d22856;
+    opacity: 0.3;
+  }
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .social-list {
+    margin: 0 0 0 75px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 180px;
+  }
+}
+
+//Деск
+
+@media (min-width: $desktop-width) {
+  .social-list {
+    margin: 5px 0 0 13px;
+  }
+}

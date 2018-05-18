@@ -1,8 +1,22 @@
+@import "../global/variables";
+@import "../global/mixins";
+
 .button {
   font-size: 18px;
   line-height: 1;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
+  background-color: #2aab6d;
   border: none;
+  border-radius: 5px;
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &--gray {
+    color: #dddfe0;
+    border-color: #dddfe0;
+  }
 }
