@@ -3,12 +3,13 @@
 
 .popup {
   position: fixed;
-  left: 0;
+  left: 50%;
   display: none;
   width: 320px;
   box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.15);
   z-index: 4;
   background-color: #ffffff;
+  transform: translateX(-160px);
 
   &--error {
     top: 20%;
@@ -18,6 +19,24 @@
     top: 50%;
     background-color: #f2f2f2;
   }
+
+  &--active {
+    display: block;
+  }
+}
+
+.popup__submitted-button {
+  display: block;
+  margin: 48px auto 52px;
+  padding: 16px 70px;
+  line-height: 1.6;
+}
+
+.popup__error-button {
+  display: block;
+  margin: 0 auto 52px;
+  padding: 16px 127px;
+  line-height: 1.6;
 }
 
 .popup__wrapper {
@@ -38,6 +57,8 @@
   padding: 0;
 }
 
+//Таблетка
+
 @media (min-width: $tablet-width) {
   .popup {
     position: fixed;
@@ -50,6 +71,14 @@
     padding: 42px 70px;
   }
 
+  .popup__submitted-button {
+    padding: 16px 77px;
+  }
+
+  .popup__error-button {
+    padding: 16px 138px;
+  }
+
   .popup__title {
     font-size: 30px;
     line-height: 1.3;
@@ -60,11 +89,13 @@
     font-size: 18px;
     line-height: 1.3;
 
-    & br {
+    br {
       display: none;
     }
   }
 }
+
+//Деск
 
 @media (min-width: $desktop-width) {
   .popup {
@@ -78,5 +109,9 @@
     padding: 42px 200px;
     text-align: center;
     background-color: #ffffff;
+  }
+
+  .popup__submitted-button {
+    padding: 16px 157px;
   }
 }

@@ -2,6 +2,7 @@
 @import "../global/mixins";
 
 .reviews {
+  @include container;
   padding: 40px 20px;
   line-height: 2.1;
   background-color: #ffffff;
@@ -9,12 +10,7 @@
 
 .reviews__item {
   margin: 0;
-  display: none;
   text-align: center;
-
-  &--current {
-    display: block;
-  }
 }
 
 .reviews__title {
@@ -28,6 +24,8 @@
   display: none;
 }
 
+//Таблетка
+
 @media (min-width: $tablet-width) {
   .reviews {
     padding: 40px 20px 20px;
@@ -35,7 +33,6 @@
 
   .reviews__item {
     &--current {
-      display: flex;
       flex-direction: column-reverse;
     }
   }
@@ -61,6 +58,8 @@
   }
 }
 
+//Деск
+
 @media (min-width: $desktop-width) {
   .reviews {
     padding: 172px 218px 48px;
@@ -69,6 +68,7 @@
   .reviews__title {
     font-size: 24px;
     line-height: 1.2;
+    color: #000000;
   }
 
   .reviews__profession {

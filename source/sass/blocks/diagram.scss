@@ -3,6 +3,10 @@
 
 .diagram {
   display: none;
+}
+
+.diagram__container {
+  @include container;
   padding: 40px 20px 0;
 }
 
@@ -42,18 +46,29 @@
   text-decoration: underline;
 }
 
+//Таблетка
+
 @media (min-width: $tablet-width) {
   .diagram {
+    display: block;
+  }
+
+  .diagram__container {
     display: flex;
     justify-content: space-between;
   }
 }
 
+//Деск
+
 @media (min-width: $desktop-width) {
   .diagram {
+    background-color: #f2f2f2;
+  }
+
+  .diagram__container {
     padding: 6px 120px 10px;
     justify-content: space-between;
-    background-color: #f2f2f2;
   }
 
   .diagram__wrapper {
@@ -68,8 +83,9 @@
 
   .diagram__title {
     line-height: 1;
+    color: #000000;
 
-    & br {
+    br {
       display: none;
     }
   }

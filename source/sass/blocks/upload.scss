@@ -2,25 +2,38 @@
 @import "../global/mixins";
 
 .upload {
-  padding: 10px 0 40px;
+  padding: 10px 0 26px;
   line-height: 2.1;
   text-align: center;
+  background-color: #ffffff;
 }
+
+.upload__header {
+  @include container;
+}
+
+.upload__container {
+  background-color: #f2f2f2;
+}
+
+//Таблетка
 
 @media (min-width: $tablet-width) {
   .upload {
     padding: 48px 0 0;
   }
 
-  .upload_caption {
+  .upload__caption {
     margin: 0;
     font-size: 18px;
     line-height: 1.6;
   }
 }
 
+//Деск
+
 @media (min-width: $desktop-width) {
   .upload {
-    padding: 7px 130px 31px;
+    padding: 5px 0 30px;
   }
 }

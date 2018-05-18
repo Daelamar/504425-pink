@@ -10,7 +10,7 @@
   width: 180px;
 }
 
-.social-list__item {
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,11 +18,20 @@
   height: 53px;
   border: 3px solid #e9ebec;
   border-radius: 50%;
+  fill: #d22856;
+
+  &:hover {
+    border: 3px solid #2f3c4b;
+  }
+
+  &:active {
+    border: 3px solid #d22856;
+    fill: #d22856;
+    opacity: 0.3;
+  }
 }
 
-.social-list__link {
-  fill: #d22856;
-}
+//Таблетка
 
 @media (min-width: $tablet-width) {
   .social-list {
@@ -34,6 +43,8 @@
     width: 180px;
   }
 }
+
+//Деск
 
 @media (min-width: $desktop-width) {
   .social-list {

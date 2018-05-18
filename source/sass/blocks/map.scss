@@ -11,12 +11,12 @@
   &::after {
     content: "";
     position: absolute;
-    right: 0;
-    top: -1px;
-    width: 320px;
-    height: 35px;
-    background: url("../../img/bg-triangle-white-footer.svg") no-repeat center;
-    background-size: 330px 35px;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    background: url("../../img/bg-triangle-white-footer.svg") no-repeat center top;
+    background-size: 100% 38px;
     z-index: 4;
   }
 }
@@ -28,6 +28,8 @@
   border: none;
 }
 
+//Таблетка
+
 @media (min-width: $tablet-width) {
   .map {
     min-height: 375px;
@@ -35,12 +37,11 @@
     &::after {
       content: "";
       position: absolute;
-      right: 0;
-      top: -1px;
-      width: 660px;
+      top: -2px;
+      width: 100%;
       height: 70px;
       background: url("../../img/bg-triangle-white-footer.svg") no-repeat center;
-      background-size: 660px 70px;
+      background-size: 100% 70px;
       z-index: 4;
     }
   }
@@ -50,6 +51,8 @@
   }
 }
 
+//Деск
+
 @media (min-width: $desktop-width) {
   .map {
     min-height: 500px;
@@ -57,8 +60,7 @@
     &::after {
       content: "";
       position: absolute;
-      right: 0;
-      top: -1px;
+      top: -2px;
       width: 100%;
       height: 127px;
       background: url("../../img/bg-triangle-white-footer.svg") no-repeat center;

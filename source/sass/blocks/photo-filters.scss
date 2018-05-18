@@ -2,11 +2,30 @@
 @import "../global/mixins";
 
 .photo-filters {
-  display: flex;
-  flex-direction: column;
+  @include container;
   margin-top: 43px;
   padding: 20px 0 0;
-  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-filters__button-post {
+  margin-bottom: 12px;
+  padding: 15px 50px;
+  width: 100%;
+  color: #d22856;
+  text-transform: none;
+  border: 3px solid #d22856;
+  border-radius: 35px;
+}
+
+.photo-filters__button-reset {
+  padding: 15px 60px;
+  width: 100%;
+  color: #dddfe0;
+  text-transform: none;
+  border: 3px solid #dddfe0;
+  border-radius: 35px;
 }
 
 .photo-filters__image {
@@ -35,8 +54,10 @@
 }
 
 .photo-filters__tool {
-  &--active .photo-filters__tool-icon {
-    fill: #d22856;
+  &--active {
+    .photo-filters__tool-icon {
+      fill: #d22856;
+    }
   }
 
   &--harshness {
@@ -63,28 +84,31 @@
   width: 240px;
   height: 2px;
   background-color: #283645;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: -6px;
-    right: 34px;
-    width: 14px;
-    height: 14px;
-    background: #ffffff;
-    border: 2px solid #d32e5b;
-    border-radius: 50%;
-  }
 }
 
-//todo:Таблетка
+.photo-filters__toggle {
+  position: absolute;
+  top: -6px;
+  right: 34px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border: 2px solid #d32e5b;
+  border-radius: 50%;
+}
+
+//Таблетка
 
 @media (min-width: $tablet-width) {
   .photo-filters {
-    margin: 70px 0 0;
+    margin-top: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .photo-filters__button-post {
+    margin-bottom: 25px;
   }
 
   .photo-filters__image {
@@ -120,7 +144,7 @@
     &--harshness {
       margin: 0;
 
-      & .photo-filters__tool-icon {
+      .photo-filters__tool-icon {
         width: 22px;
         height: 22px;
         fill: #d22856;
@@ -128,7 +152,7 @@
     }
 
     &--brightness {
-      & .photo-filters__tool-icon {
+      .photo-filters__tool-icon {
         width: 24px;
         height: 24px;
         fill: #d22856;
@@ -138,7 +162,7 @@
     &--contrast {
       margin: 0;
 
-      & .photo-filters__tool-icon {
+      .photo-filters__tool-icon {
         width: 16px;
         height: 16px;
         fill: #d22856;
@@ -159,29 +183,23 @@
     }
 
     &--harshness {
-      .photo-filters__radio-bar {
-        &::after {
-          right: 42px;
-          background: #d32e5b;
-        }
+      .photo-filters__toggle {
+        right: 42px;
+        background: #d32e5b;
       }
     }
 
     &--brightness {
-      .photo-filters__radio-bar {
-        &::after {
-          right: 163px;
-          background: #d32e5b;
-        }
+      .photo-filters__toggle {
+        right: 163px;
+        background: #d32e5b;
       }
     }
 
     &--contrast {
-      .photo-filters__radio-bar {
-        &::after {
-          right: 92px;
-          background: #d32e5b;
-        }
+      .photo-filters__toggle {
+        right: 92px;
+        background: #d32e5b;
       }
     }
   }
@@ -200,9 +218,24 @@
   }
 }
 
-//todo:Деск
+//Деск
 
 @media (min-width: $desktop-width) {
+  .photo-filters {
+    padding: 20px 130px 0;
+  }
+
+  .photo-filters__button-post {
+    margin-bottom: 0;
+    padding: 15px;
+    width: 183px;
+  }
+
+  .photo-filters__button-reset {
+    padding: 15px;
+    width: 183px;
+  }
+
   .photo-filters__wrapper {
     margin: 19px 60px 0 0;
     width: 412px;
@@ -212,7 +245,6 @@
       padding: 0;
       justify-content: space-between;
       flex-direction: row;
-
     }
   }
 
@@ -262,28 +294,20 @@
     padding: 35px 29px;
 
     &--harshness {
-      .photo-filters__radio-bar {
-        &::after {
-          right: 204px;
-        }
+      .photo-filters__toggle {
+        right: 204px;
       }
     }
 
     &--brightness {
-      .photo-filters__radio-bar {
-        &::after {
-          right: 28px;
-          background: #d32e5b;
-        }
+      .photo-filters__toggle {
+        right: 28px;
       }
     }
 
     &--contrast {
-      .photo-filters__radio-bar {
-        &::after {
-          right: 115px;
-          background: #d32e5b;
-        }
+      .photo-filters__toggle {
+        right: 115px;
       }
     }
   }

@@ -6,6 +6,15 @@
   background-color: #ffffff;
 }
 
+.form__button {
+  padding: 18px 47px;
+  line-height: 1.6;
+}
+
+.form__header {
+  @include container;
+}
+
 .form__caption {
   padding: 0 20px 0;
   text-align: center;
@@ -36,7 +45,7 @@
   }
 
   &--app {
-    padding: 40px 0 0 0;
+    padding: 40px 0 43px 0;
     background-color: #f2f2f2;
   }
 
@@ -47,15 +56,78 @@
 }
 
 .form__field {
-  margin: 0;
+  @include container;
   padding: 0 20px 42px;
   border: none;
 
-  .form__legend {
-    padding: 0 30px 0;
-    line-height: 1.2;
-    text-transform: uppercase;
+  &--username {
+    .form__item {
+      margin: 21px 0 0 0;
+    }
+
+    .form__label {
+      margin: 0 0 0 22px;
+    }
   }
+
+  &--achievement {
+    text-align: center;
+
+    .form__item {
+      margin: 42px 0 0 0;
+      padding: 6px 0;
+      text-align: left;
+    }
+  }
+
+  &--userdata {
+    padding: 10px 20px 43px;
+
+    .form__item {
+      margin: 20px 0 0 0;
+    }
+
+    .form__label {
+      margin: 0 0 0 22px;
+    }
+
+    .form__legend {
+      display: none;
+    }
+  }
+
+  &--app {
+    padding: 0 40px 0;
+    text-align: center;
+
+    .form__item {
+      margin: 35px 0 0 0;
+      padding: 6px 0;
+      text-align: left;
+    }
+  }
+
+  &--emotions {
+    .form__label {
+      margin: 0 0 0 18px;
+    }
+
+    .form__comment {
+      margin: 12px 0 0 0;
+      padding: 16px 20px;
+      width: 100%;
+      min-height: 200px;
+      font-size: 18px;
+      line-height: 1.6;
+      border: 2px solid #e5e5e5;
+    }
+  }
+}
+
+.form__legend {
+  padding: 0 30px 0;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .form__label {
@@ -69,16 +141,6 @@
   }
 }
 
-.form__field--username {
-  & .form__item {
-    margin: 21px 0 0 0;
-  }
-
-  & .form__label {
-    margin: 0 0 0 22px;
-  }
-}
-
 .form__input {
   margin: 5px 0 0 0;
   padding: 15px 20px;
@@ -88,14 +150,9 @@
   border: 2px solid #e5e5e5;
 }
 
-.form__field--achievement {
-  text-align: center;
-
-  & .form__item {
-    margin: 42px 0 0 0;
-    padding: 6px 0;
-    text-align: left;
-  }
+.form__checkbox,
+.form__radio {
+  display: none;
 }
 
 .form__label-checkbox {
@@ -117,33 +174,6 @@
 
 .form__checkbox:checked + .form__label-checkbox::after {
   background: #ffffff url("../../img/icon-checked.svg") no-repeat center;
-}
-
-.form__field--userdata {
-  padding: 10px 0 0 0;
-
-  & .form__item {
-    margin: 20px 0 0 0;
-  }
-
-  & .form__label {
-    margin: 0 0 0 22px;
-  }
-
-  .form__legend {
-    display: none;
-  }
-}
-
-.form__field--app {
-  padding-bottom: 0;
-  text-align: center;
-
-  & .form__item {
-    margin: 35px 0 0 0;
-    padding: 6px 0;
-    text-align: left;
-  }
 }
 
 .form__label-radio {
@@ -168,23 +198,8 @@
   background: #ffffff url("../../img/icon-map-marker.svg") no-repeat center;
 }
 
-.form__field--emotions {
-  & .form__label {
-    margin: 0 0 0 18px;
-  }
-
-  & .form__comment {
-    margin: 12px 0 0 0;
-    padding: 16px 20px;
-    width: 100%;
-    min-height: 200px;
-    font-size: 18px;
-    line-height: 1.6;
-    border: 2px solid #e5e5e5;
-  }
-}
-
 .form__footer {
+  @include container;
   padding: 0 20px 42px;
   text-align: center;
 }
@@ -198,16 +213,26 @@
   display: none;
 }
 
-//todo:Таблетка
+//Таблетка
 
 @media (min-width: $tablet-width) {
   .form {
+    @include container;
     padding: 94px 20px 0;
+  }
+
+  .form__button {
+    padding: 18px 58px;
+  }
+
+  .form__header {
+    width: 620px;
   }
 
   .form__caption {
     margin: 0;
     padding: 0 30px 0;
+    width: 100%;
     font-size: 18px;
     line-height: 1.7;
   }
@@ -216,26 +241,26 @@
     display: block;
   }
 
-  .form__field {
-    padding: 0;
+  .form__legend {
+    text-align: center;
+  }
 
-    .form__legend {
-      display: block;
-      text-align: center;
-    }
+  .form__field {
+    width: 620px;
+    padding: 0;
 
     &--username {
       margin: 23px 0 0 0;
 
-      & .form__item {
+      .form__item {
         margin: 51px 0 0 0;
       }
 
-      & .form__label {
+      .form__label {
         margin: 0 20px 0 0;
       }
 
-      & .form__input {
+      .form__input {
         margin: 0;
         padding: 15px 20px;
       }
@@ -245,11 +270,11 @@
       padding: 0 0 60px;
       border: 2px solid #e5e5e5;
 
-      & .form__list {
+      .form__list {
         padding: 0 70px;
       }
 
-      & .form__item {
+      .form__item {
         margin: 48px 0 0 0;
         padding: 0;
       }
@@ -259,25 +284,30 @@
       padding: 5px 58px 26px;
       border: 2px solid #e5e5e5;
 
-      & .form__item {
+      .form__item {
         margin: 32px 0 0 0;
         display: flex;
         flex-direction: column-reverse;
       }
 
-      & .form__label {
+      .form__legend {
+        display: block;
+        text-align: center;
+      }
+
+      .form__label {
         margin: 0 0 0 20px;
         align-self: flex-start;
       }
 
-      & .form__input {
+      .form__input {
         margin: 0 0 11px;
         padding: 15px 20px;
       }
     }
 
     &--achievement {
-      padding: 5px 48px 53px;
+      padding: 5px 48px 48px;
       border: 2px solid #e5e5e5;
     }
 
@@ -285,7 +315,7 @@
       padding: 20px 58px 45px;
       border: 2px solid #e5e5e5;
 
-      & .form__label {
+      .form__label {
         margin: 0;
       }
 
@@ -313,7 +343,7 @@
     }
 
     &--achievement {
-      padding: 58px 0 0;
+      padding: 56px 0 0;
     }
 
     &--emotions {
@@ -349,18 +379,25 @@
     padding: 67px 0 47px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 620px;
 
-    & .form__warning {
-      margin: 21px 0 0 0;
+    .form__warning {
+      margin: 0;
     }
   }
 }
 
-//todo:Деск
+//Деск
 
 @media (min-width: $desktop-width) {
   .form {
+    @include container;
     padding: 92px 130px 0;
+  }
+
+  .form__header {
+    width: 940px;
   }
 
   .form__title {
@@ -368,7 +405,8 @@
   }
 
   .form__caption {
-    padding: 0 76px 0;
+    width: 100%;
+    padding: 0 50px 0;
   }
 
   .form__wrapper {
@@ -378,15 +416,8 @@
   }
 
   .form__field-wrapper {
-    flex-basis: 100%;
-
-    &--username {
-      flex-basis: 435px;
-    }
-
     &--app {
       padding: 72px 0 0 0;
-      flex-basis: 435px;
     }
 
     &--userdata {
@@ -403,8 +434,12 @@
   }
 
   .form__field {
+    width: 940px;
+
     &--achievement {
-      & .form__item {
+      padding: 5px 48px 54px;
+
+      .form__item {
         min-width: 230px;
 
         &:nth-child(2) {
@@ -429,7 +464,7 @@
         }
       }
 
-      & .form__list {
+      .form__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -438,14 +473,17 @@
 
     &--username {
       margin: 28px 0 0 0;
+      width: 435px;
 
-      & .form__item {
+      .form__item {
         margin: 55px 0 0 0;
       }
     }
 
     &--app {
-      & .form__list {
+      width: 435px;
+
+      .form__list {
         padding: 0 86px;
       }
     }
@@ -453,22 +491,22 @@
     &--userdata {
       padding: 5px 58px 12px;
 
-      & .form__list {
+      .form__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
 
-      & .form__item {
+      .form__item {
         width: 374px;
       }
 
-      & .form__label {
+      .form__label {
         margin: 0 0 0 20px;
         align-self: flex-start;
       }
 
-      & .form__input {
+      .form__input {
         margin: 0 0 9px;
         width: 100%;
       }
@@ -478,6 +516,7 @@
       padding: 20px 58px 35px;
 
       .form__comment {
+        color: #283645;
         min-height: 128px;
       }
     }

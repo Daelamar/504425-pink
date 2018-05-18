@@ -8,64 +8,71 @@
   background-color: #ffffff;
 }
 
-.contacts-list {
+.contacts__list {
   @include listStyle;
-  padding: 10px 0 0 0;
+  padding: 6px 0 0 0;
 }
 
-.contacts-list__wrapper {
+.contacts__list-wrapper {
   margin: 28px 0 0;
 }
 
-.contacts_question {
+.contacts__question {
   margin: 0;
   padding: 0;
   line-height: 1.2;
-
-  & br {
-    display: none;
-  }
 }
 
 .contacts__wrapper {
+  @include container;
   padding: 45px 20px 40px;
 }
 
-.contacts-list__title {
+.contacts__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
 }
 
-.contacts-list__description {
+.contacts__description {
   margin: 5px 0 0;
   line-height: 1.2;
 }
 
-//todo:Таблетка
+.contacts__link {
+  color: #d22856;
+
+  &:hover {
+    color: #283645;
+    border-bottom: 1px solid #283645;
+  }
+
+  &:active {
+    color: #ced0d2;
+    border-bottom: none;
+  }
+}
+
+//Таблетка
 
 @media (min-width: $tablet-width) {
   .contacts__wrapper {
     padding: 48px 10px 28px;
   }
 
-  .contacts_question {
+  .contacts__question {
     font-size: 40px;
     font-weight: 300;
     line-height: 1.2;
-
-    & br {
-      display: inherit;
-    }
   }
 
-  .contacts-list {
+  .contacts__list {
     padding: 45px 0 0 0;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .contacts-list__wrapper {
+  .contacts__list-wrapper {
     margin: 0 auto 51px;
     padding: 0 20px;
     width: 50%;
@@ -75,26 +82,31 @@
     }
   }
 
-  .contacts-list__description {
+  .contacts__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  .contacts__description {
     margin: 8px 0 0;
     line-height: 1.2;
   }
 }
 
-//todo:Деск
+//Деск
 
 @media (min-width: $desktop-width) {
   .contacts__wrapper {
     padding: 65px 120px 0;
   }
 
-  .contacts-list {
+  .contacts__list {
     display: flex;
     justify-content: space-between;
     padding: 59px 0 0 0;
   }
 
-  .contacts-list__wrapper {
+  .contacts__list-wrapper {
     margin: 0 auto 51px;
     padding: 0 22px 0 20px;
     width: 30%;
@@ -112,11 +124,11 @@
     }
   }
 
-  .contacts_question {
+  .contacts__question {
     font-size: 50px;
   }
 
-  .contacts-list__description {
+  .contacts__description {
     margin: 28px 0 0;
   }
 }

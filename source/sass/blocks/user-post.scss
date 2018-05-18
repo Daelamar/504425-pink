@@ -2,11 +2,15 @@
 @import "../global/mixins";
 
 .user-post {
-  margin: 0 0 20px;
-  background-color: #f2f2f2;
-
   &--panorama {
+    margin-top: 50px;
     position: relative;
+
+    .user-post__wrapper {
+      margin: 0 auto;
+      padding: 18px 10px 21px 18px;
+      width: 280px;
+    }
   }
 }
 
@@ -17,7 +21,8 @@
 
 .user-post__image {
   &--panorama {
-    margin-left: -20px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -25,7 +30,7 @@
   position: absolute;
   top: 0;
   padding: 6px 20px;
-  right: 0;
+  right: 20px;
   font-size: 12px;
   font-weight: 700;
   line-height: 2;
@@ -35,7 +40,10 @@
 }
 
 .user-post__wrapper {
+  width: 280px;
   padding: 18px 18px 21px;
+  text-align: left;
+  background-color: #f2f2f2;
 }
 
 .user-post__user-info {
@@ -49,16 +57,18 @@
 }
 
 .user-post__wrapper-heart {
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 .user-post__button-heart {
-  width: 13px;
-  height: 12px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
   background: transparent url("../../img/icon-heart.svg") no-repeat center;
+  background-position: left;
   border: none;
 }
 
@@ -69,30 +79,32 @@
 }
 
 .user-post__likes {
-  margin: 0 0 0 19px;
+  margin: 0 0 0 10px;
   padding: 0;
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-//todo:Таблетка
+//Таблетка
 
 @media (min-width: $tablet-width) {
   .user-post {
-    margin: 0 0 54px;
     width: 300px;
 
     &--panorama {
-      margin: 0 0 50px;
+      margin-top: 78px;
+      margin-bottom: 50px;
       width: 100%;
 
       .user-post__wrapper {
+        margin: 0 auto;
         padding: 24px 28px 21px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        width: 620px;
         min-height: 120px;
       }
 
@@ -105,29 +117,32 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 120px;
+        width: auto;
         order: -1;
       }
 
       .user-post__likes {
-        margin: 0;
+        margin: 0 0 0 12px;
       }
     }
   }
 
+  .user-post__button-heart {
+    background-position: right;
+  }
+
   .user-post__image {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 300px; //todo: убрать после ретинизации
 
     &--panorama {
-      width: 660px;
-      height: 510px;
+      width: 100%;
+      height: 510px; //todo: убрать после ретинизации
     }
   }
 
   .user-post__label {
     top: 58px;
-    right: 0;
   }
 
   .user-post__wrapper {
@@ -135,7 +150,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 155px;
+    width: 100%;
+    min-height: 158px;
   }
 
   .user-post__comment {
@@ -156,36 +172,33 @@
   }
 }
 
-//todo:Таблетка
+//Деск
 
 @media (min-width: $desktop-width) {
   .user-post {
     &--panorama {
-      width: 100%;
+      margin-top: 91px;
+      margin-bottom: 50px;
 
       .user-post__wrapper {
+        width: 940px;
         min-height: 96px;
       }
     }
   }
 
   .user-post__image {
-    width: 300px;
-    height: 400px;
+    height: 400px; //todo: убрать после ретинизации
 
     &--panorama {
-      margin-left: -130px;
-      width: 1200px;
-      height: 506px;
+      width: 100%;
+      height: 506px; //todo: убрать после ретинизации
     }
   }
 
   .user-post__label {
-    top: 52px;
+    right: 130px;
+    top: 54px;
   }
 
-  .user-post__wrapper {
-    padding: 25px 32px 25px 28px;
-    min-height: 155px;
-  }
 }
