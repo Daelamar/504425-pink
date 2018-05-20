@@ -36,7 +36,12 @@
   @include listStyle;
   @include container;
   padding: 55px 20px 310px;
-  background: url("../../img/iphone-screen-mobile@1x.png") no-repeat center 500px;
+  background: url("../../img/iphone-screen-mobile@1x.png") no-repeat center bottom -35px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../../img/iphone-screen-mobile@2x.png") no-repeat center bottom -35px;
+    background-size: 157px;
+  }
 }
 
 .features__list-item {
@@ -69,8 +74,13 @@
 
   .features__list {
     padding: 56px 20px 28px 329px;
-    background: url("../../img/iphone-screen-mobile@1x.png") no-repeat 20px 6px, url("../../img/bg-triangle-white.svg") no-repeat 0 -42px;
-    background-size: 40%, auto;
+    background: url("../../img/iphone-screen-3-tablet@1x.png") no-repeat left 20px bottom;
+    background-size: auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../../img/iphone-screen-3-tablet@2x.png") no-repeat left 20px bottom;
+      background-size: 268px;
+    }
   }
 
   .features__list-item {
@@ -98,9 +108,15 @@
   .features__list {
     @include container;
     display: flex;
+    flex-wrap: wrap;
     padding: 360px 120px 40px;
     width: auto;
-    background: url("../../img/iphone-screen-mobile@1x.png") no-repeat 230px top, url("../../img/iphone-screen-mobile@1x.png") no-repeat center top, url("../../img/iphone-screen-mobile@1x.png") no-repeat 810px top, url("../../img/bg-triangle-white.svg") no-repeat -1px 0;
+    background: url("../../img/iphone-screen-1-desktop@1x.png") no-repeat 133px top, url("../../img/iphone-screen-2-desktop@1x.png") no-repeat center top, url("../../img/iphone-screen-3-desktop@1x.png") no-repeat 777px top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../../img/iphone-screen-1-desktop@1x.png") no-repeat 133px top, url("../../img/iphone-screen-2-desktop@1x.png") no-repeat center top, url("../../img/iphone-screen-3-desktop@1x.png") no-repeat 777px top;
+      background-size: 292px;
+    }
   }
 
   .features__title {

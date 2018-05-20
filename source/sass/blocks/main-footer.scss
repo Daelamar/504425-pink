@@ -15,7 +15,9 @@
   }
 }
 
-.main-footer__logo {
+.main-footer__logo-icon {
+  cursor: pointer;
+
   &:hover {
     fill: #d22856;
   }
@@ -23,6 +25,12 @@
   &:active {
     fill: #283645;
     opacity: 0.3;
+  }
+}
+
+.main-footer__logo-icon {
+  &--desktop {
+    display: none;
   }
 }
 
@@ -35,7 +43,7 @@
   width: 142px;
 }
 
-.main-footer__refinement-link {
+.main-footer__refinement-icon {
   fill: #d22856;
 
   &:hover {
@@ -77,6 +85,14 @@
   .main-footer {
     padding: 66px 128px;
     justify-content: space-between;
+  }
+
+  .main-footer__logo-icon {
+    display: none;
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .main-footer__refinement {
