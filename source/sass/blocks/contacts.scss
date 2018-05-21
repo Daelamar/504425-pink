@@ -41,6 +41,7 @@
 
 .contacts__link {
   color: #d22856;
+  transition: color 0.3s;
 
   &:hover {
     color: #283645;
@@ -50,6 +51,7 @@
   &:active {
     color: #ced0d2;
     border-bottom: none;
+    transition-duration: 0s;
   }
 }
 
@@ -97,7 +99,7 @@
 
 @media (min-width: $desktop-width) {
   .contacts__wrapper {
-    padding: 65px 120px 0;
+    padding: 65px 0 0;
   }
 
   .contacts__list {

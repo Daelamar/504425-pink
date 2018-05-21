@@ -121,6 +121,17 @@
       font-size: 18px;
       line-height: 1.6;
       border: 2px solid #e5e5e5;
+      transition: border-color 0.3s;
+
+      &:hover {
+        border: 2px solid #283645;
+      }
+
+      &:active,
+      &:focus {
+        border: 2px solid #d22856;
+        outline: none;
+      }
     }
   }
 }
@@ -149,6 +160,7 @@
   font-size: 18px;
   line-height: 1.6;
   border: 2px solid #e5e5e5;
+  transition: border-color 0.3s;
 
   &:hover {
     border: 2px solid #283645;
@@ -159,11 +171,6 @@
     border: 2px solid #d22856;
     outline: none;
   }
-}
-
-.form__checkbox,
-.form__radio {
-  display: none;
 }
 
 .form__label-checkbox {
@@ -180,7 +187,7 @@
     height: 39px;
     background: #ffffff;
     border: 2px solid #e5e5e5;
-    transition-duration: 0.3s;
+    transition: border-color 0.3s;
   }
 
   &:hover {
@@ -199,18 +206,17 @@
   }
 }
 
-.form__checkbox:focus + .form__label-checkbox::after,
+.form__checkbox:checked + .form__label-checkbox::after,
 .form__checkbox:active + .form__label-checkbox::after {
   background: #ffffff url("../../img/icon-checked.svg") no-repeat center;
 }
 
-.form__checkbox:checked + .form__label-checkbox::after {
-  background: #ffffff url("../../img/icon-checked.svg") no-repeat center;
+.form__checkbox:checked:active + .form__label-checkbox::after {
+  background-image: none;
 }
 
-.form__checkbox:checked:focus + .form__label-checkbox::after,
-.form__checkbox:checked:active + .form__label-checkbox::after {
-  background: #ffffff;
+.form__checkbox:focus + .form__label-checkbox::after {
+  border-color: #283645;
 }
 
 .form__label-radio {
@@ -228,7 +234,7 @@
     background: #ffffff;
     border: 2px solid #e5e5e5;
     border-radius: 50%;
-    transition-duration: 0.3s;
+    transition: border-color 0.3s;
   }
 
   &:hover {
@@ -247,20 +253,18 @@
   }
 }
 
-.form__radio:focus + .form__label-radio::after,
+.form__radio:checked + .form__label-radio::after,
 .form__radio:active + .form__label-radio::after {
   background: #ffffff url("../../img/icon-map-marker.svg") no-repeat center;
   background-size: 100% 100%;
 }
 
-.form__radio:checked + .form__label-radio::after {
-  background: #ffffff url("../../img/icon-map-marker.svg") no-repeat center;
-  background-size: 100% 100%;
+.form__radio:checked:active + .form__label-radio::after {
+  background-image: none;
 }
 
-.form__radio:checked:focus + .form__label-radio::after,
-.form__radio:checked:active + .form__label-radio::after {
-  background: #ffffff;
+.form__radio:checked:focus + .form__label-radio::after {
+  border-color: #283645;
 }
 
 .form__footer {
@@ -485,7 +489,7 @@
 @media (min-width: $desktop-width) {
   .form {
     @include container;
-    padding: 92px 130px 0;
+    padding: 92px 10px 0;
   }
 
   .form__header {

@@ -10,7 +10,7 @@
   background-color: #2aab6d;
   border: none;
   border-radius: 5px;
-  transition-duration: 0.3s;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 
   &--transparent {
     background-color: transparent;
@@ -22,15 +22,16 @@
   }
 
   &--green {
-    &:hover {
-      background-color: #1c9b5e;
-    }
-
-    &:active,
+    &:hover,
     &:focus {
-      color: #7dbd99;
       background-color: #1c9b5e;
       outline: none;
+    }
+
+    &:active {
+      color: #7dbd99;
+      background-color: #1c9b5e;
+      transition-duration: 0s;
     }
 
     &:disabled {

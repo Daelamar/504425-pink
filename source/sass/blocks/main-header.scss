@@ -58,6 +58,7 @@
 .main-header__logo-icon {
   cursor: pointer;
   fill: #ffffff;
+  transition: fill 0.3s;
 
   &:hover {
     fill: #d22856;
@@ -66,6 +67,7 @@
   &:active {
     fill: #ffffff;
     opacity: 0.3;
+    transition-duration: 0s;
   }
 
   &--tablet,
@@ -123,6 +125,7 @@
     &::before,
     &::after {
       background-color: #5e354e;
+      transition-duration: 0s;
     }
   }
 }
@@ -168,8 +171,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 130px;
-    width: 1200px;
+    padding: 0 10px;
+    width: 960px;
   }
 
   .main-header__logo-icon {

@@ -17,6 +17,7 @@
 
 .main-footer__logo-icon {
   cursor: pointer;
+  transition: fill 0.3s;
 
   &:hover {
     fill: #d22856;
@@ -25,10 +26,9 @@
   &:active {
     fill: #283645;
     opacity: 0.3;
+    transition-duration: 0s;
   }
-}
 
-.main-footer__logo-icon {
   &--desktop {
     display: none;
   }
@@ -45,6 +45,7 @@
 
 .main-footer__refinement-icon {
   fill: #d22856;
+  transition: fill 0.3s;
 
   &:hover {
     fill: #283645;
@@ -53,6 +54,7 @@
   &:active {
     fill: #d22856;
     opacity: 0.3;
+    transition-duration: 0s;
   }
 }
 
@@ -83,7 +85,7 @@
 
 @media (min-width: $desktop-width) {
   .main-footer {
-    padding: 66px 128px;
+    padding: 66px 10px;
     justify-content: space-between;
   }
 

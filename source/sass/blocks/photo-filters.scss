@@ -19,16 +19,17 @@
   border-radius: 35px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #ffffff;
     background-color: #d22856;
+    outline: none;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     color: #e08195;
     background-color: #d22856;
-    outline: none;
+    transition-duration: 0s;
   }
 }
 
@@ -41,17 +42,18 @@
   border-radius: 35px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #c4c6c8;
     border-color: #b5b9be;
+    outline: none;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     color: #cdd0d3;
     background-color: #b5b9be;
     border-color: #b5b9be;
-    outline: none;
+    transition-duration: 0s;
   }
 }
 
@@ -280,7 +282,7 @@
 
 @media (min-width: $desktop-width) {
   .photo-filters {
-    padding: 20px 130px 0;
+    padding: 20px 10px 0;
   }
 
   .photo-filters__button-post {

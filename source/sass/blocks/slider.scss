@@ -32,19 +32,21 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  transition: fill 0.3s;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
+
     .slider__arrow-icon {
       fill: #7e868f;
     }
   }
 
-  &:active,
-  &:focus {
-    outline: none;
-
+  &:active {
     .slider__arrow-icon {
       fill: #e9ebec;
+      transition-duration: 0s;
     }
   }
 }
@@ -66,6 +68,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
 
   &::after {
     content: "";
@@ -91,15 +94,17 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::after {
       background-color: #7e868f;
     }
+  }
 
-    &:active {
-      &::after {
-        background-color: #e9ebec;
-      }
+  &:active {
+    &::after {
+      background-color: #e9ebec;
+      transition-duration: 0s;
     }
   }
 }

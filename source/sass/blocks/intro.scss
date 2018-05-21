@@ -85,16 +85,17 @@
   border: 3px solid #ffffff;
   border-radius: 35px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #d22856;
     background-color: #ffffff;
+    outline: none;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     color: #f2ced5;
     background-color: #ffffff;
-    outline: none;
+    transition-duration: 0s;
   }
 }
 
@@ -227,18 +228,18 @@
 
     .intro__container {
       padding: 13px 0 0;
-      background: url("../../img/iphone-hand-desktop@1x.png") no-repeat 146px 3px;
+      background: url("../../img/iphone-hand-desktop@1x.png") no-repeat 28px 3px;
       background-size: auto;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background: url("../../img/iphone-hand-desktop@2x.png") no-repeat 146px 3px;
+        background: url("../../img/iphone-hand-desktop@2x.png") no-repeat 28px 3px;
         background-size: 1050px;
       }
     }
 
     .intro__wrapper {
       margin: 0 auto 0 0;
-      padding: 0 65px 124px 130px;
+      padding: 0 185px 124px 10px;
       width: 500px;
       background-color: transparent;
       z-index: 2;

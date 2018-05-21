@@ -93,7 +93,7 @@
 
 @media (min-width: $desktop-width) {
   .features__header {
-    padding: 68px 190px 72px;
+    padding: 68px 72px 72px;
   }
 
   .features__header-title,
@@ -109,12 +109,12 @@
     @include container;
     display: flex;
     flex-wrap: wrap;
-    padding: 360px 120px 40px;
+    padding: 360px 0 40px;
     width: auto;
-    background: url("../../img/iphone-screen-1-desktop@1x.png") no-repeat 133px top, url("../../img/iphone-screen-2-desktop@1x.png") no-repeat center top, url("../../img/iphone-screen-3-desktop@1x.png") no-repeat 777px top;
+    background: url("../../img/iphone-screen-1-desktop@1x.png") no-repeat 2% top, url("../../img/iphone-screen-2-desktop@1x.png") no-repeat center top, url("../../img/iphone-screen-3-desktop@1x.png") no-repeat 98% top;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../../img/iphone-screen-1-desktop@1x.png") no-repeat 133px top, url("../../img/iphone-screen-2-desktop@1x.png") no-repeat center top, url("../../img/iphone-screen-3-desktop@1x.png") no-repeat 777px top;
+      background: url("../../img/iphone-screen-1-desktop@1x.png") no-repeat 2% top, url("../../img/iphone-screen-2-desktop@1x.png") no-repeat center top, url("../../img/iphone-screen-3-desktop@1x.png") no-repeat 98% top;
       background-size: 292px;
     }
   }
