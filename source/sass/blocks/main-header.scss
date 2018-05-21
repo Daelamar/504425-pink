@@ -8,7 +8,7 @@
   background-color: #283645;
 
   &--closed {
-    background-color: rgba(29, 38, 49, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     border-bottom: none;
 
     .main-header__button-menu {
@@ -55,6 +55,27 @@
   }
 }
 
+.main-header__logo-icon {
+  cursor: pointer;
+  fill: #ffffff;
+  transition: fill 0.3s;
+
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: 0.3;
+    transition-duration: 0s;
+  }
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
 .main-header__top-nav {
   @include container;
   display: flex;
@@ -98,15 +119,14 @@
     &::after {
       background-color: #d22856;
     }
-
   }
 
   &:active {
     &::before,
     &::after {
       background-color: #5e354e;
+      transition-duration: 0s;
     }
-
   }
 }
 
@@ -117,13 +137,24 @@
     margin-bottom: -$height-topNavTab;
   }
 
+  .main-header__logo-icon {
+    &--tablet {
+      display: block;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+  }
+
   .main-header__top-nav {
     align-items: center;
-    padding: 37px 20px;
+    padding: 28px 20px 41px;
   }
 
   .main-header__button-menu {
-    margin-top: 7px;
+    margin-top: 12px;
   }
 }
 
@@ -132,7 +163,7 @@
 @media (min-width: $desktop-width) {
   .main-header {
     min-height: 110px;
-    background-color: rgba(29, 38, 49, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .main-header__container {
@@ -140,8 +171,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 130px;
-    width: 1200px;
+    padding: 0 10px;
+    width: 960px;
+  }
+
+  .main-header__logo-icon {
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
   }
 
   .main-header__button-menu {
@@ -149,8 +191,9 @@
   }
 
   .main-header__top-nav {
-    width: auto;
     margin: 0;
+    padding: 28px 20px 41px 0;
+    width: auto;
     background-color: transparent;
     border: none;
   }

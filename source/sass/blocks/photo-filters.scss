@@ -17,6 +17,20 @@
   text-transform: none;
   border: 3px solid #d22856;
   border-radius: 35px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #d22856;
+    outline: none;
+  }
+
+  &:active {
+    color: #e08195;
+    background-color: #d22856;
+    transition-duration: 0s;
+  }
 }
 
 .photo-filters__button-reset {
@@ -26,6 +40,21 @@
   text-transform: none;
   border: 3px solid #dddfe0;
   border-radius: 35px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #c4c6c8;
+    border-color: #b5b9be;
+    outline: none;
+  }
+
+  &:active {
+    color: #cdd0d3;
+    background-color: #b5b9be;
+    border-color: #b5b9be;
+    transition-duration: 0s;
+  }
 }
 
 .photo-filters__image {
@@ -53,7 +82,22 @@
   border-bottom: 1px solid #dddfe0;
 }
 
+.photo-filters__tool-icon {
+  transition-duration: 0.3s;
+
+  &:hover {
+    fill: #8d949b;
+  }
+
+  &:active,
+  &focus {
+    fill: #d22856;
+  }
+}
+
 .photo-filters__tool {
+  cursor: pointer;
+
   &--active {
     .photo-filters__tool-icon {
       fill: #d22856;
@@ -95,6 +139,13 @@
   background: #ffffff;
   border: 2px solid #d32e5b;
   border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  &:active,
+  &:focus {
+    background: #d32e5b;
+  }
 }
 
 //Таблетка
@@ -148,6 +199,10 @@
         width: 22px;
         height: 22px;
         fill: #d22856;
+
+        &:hover {
+          fill: #8d949b;
+        }
       }
     }
 
@@ -156,6 +211,10 @@
         width: 24px;
         height: 24px;
         fill: #d22856;
+
+        &:hover {
+          fill: #8d949b;
+        }
       }
     }
 
@@ -166,6 +225,10 @@
         width: 16px;
         height: 16px;
         fill: #d22856;
+
+        &:hover {
+          fill: #8d949b;
+        }
       }
     }
   }
@@ -185,21 +248,18 @@
     &--harshness {
       .photo-filters__toggle {
         right: 42px;
-        background: #d32e5b;
       }
     }
 
     &--brightness {
       .photo-filters__toggle {
         right: 163px;
-        background: #d32e5b;
       }
     }
 
     &--contrast {
       .photo-filters__toggle {
         right: 92px;
-        background: #d32e5b;
       }
     }
   }
@@ -222,7 +282,7 @@
 
 @media (min-width: $desktop-width) {
   .photo-filters {
-    padding: 20px 130px 0;
+    padding: 20px 10px 0;
   }
 
   .photo-filters__button-post {

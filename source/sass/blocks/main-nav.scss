@@ -25,6 +25,7 @@
   background-color: #283645;
   border-top: 1px solid #485461;
   border-bottom: 1px solid #000000;
+  transition: color 0.3s;
 
   &:hover {
     color: #d22856;
@@ -32,6 +33,7 @@
 
   &:active {
     color: #6c324a;
+    transition-duration: 0s;
   }
 }
 
