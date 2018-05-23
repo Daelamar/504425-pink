@@ -2,7 +2,7 @@
 @import "../global/mixins";
 
 .prices {
-  background: #f2f2f2 url("../../img/bg-triangle-white.svg") no-repeat 50% 0;
+  background: #f2f2f2 url("../img/bg-triangle-white.svg") no-repeat 50% 0;
   background-size: 101% auto;
 }
 
@@ -83,12 +83,12 @@
 
 .prices__content-item {
   padding: 15px 22px;
-  background: #ffffff url("../../img/icon-yes.svg") no-repeat 94% 50%;
+  background: #ffffff url("../img/icon-yes.svg") no-repeat 94% 50%;
   background-size: 32px 22px;
   border: 1px solid #f2f2f2;
 
   &--not-bundle {
-    background: #ffffff url("../../img/icon-no.svg") no-repeat 93% 47%;
+    background: #ffffff url("../img/icon-no.svg") no-repeat 93% 47%;
     background-size: 27px 26px;
   }
 }
@@ -143,11 +143,11 @@
   .prices__content-item {
     padding: 6px 15px;
     min-height: 47px;
-    background: #ffffff url("../../img/icon-yes.svg") no-repeat 50% 38%;
+    background: #ffffff url("../img/icon-yes.svg") no-repeat 50% 38%;
     background-size: 32px 22px;
 
     &--not-bundle {
-      background: #ffffff url("../../img/icon-no.svg") no-repeat 50% 38%;
+      background: #ffffff url("../img/icon-no.svg") no-repeat 50% 38%;
       background-size: 27px 26px;
     }
   }
@@ -200,11 +200,11 @@
     font-size: 18px;
     line-height: 1.6;
     min-height: 61px;
-    background: #ffffff url("../../img/icon-yes.svg") no-repeat 50% 55%;
+    background: #ffffff url("../img/icon-yes.svg") no-repeat 50% 55%;
     background-size: 30px 22px;
 
     &--not-bundle {
-      background: #ffffff url("../../img/icon-no.svg") no-repeat 50% 55%;
+      background: #ffffff url("../img/icon-no.svg") no-repeat 50% 55%;
       background-size: 26px 26px;
     }
   }

@@ -208,7 +208,7 @@
 
 .form__checkbox:checked + .form__label-checkbox::after,
 .form__checkbox:active + .form__label-checkbox::after {
-  background: #ffffff url("../../img/icon-checked.svg") no-repeat center;
+  background: #ffffff url("../img/icon-checked.svg") no-repeat center;
 }
 
 .form__checkbox:checked:active + .form__label-checkbox::after {
@@ -255,7 +255,7 @@
 
 .form__radio:checked + .form__label-radio::after,
 .form__radio:active + .form__label-radio::after {
-  background: #ffffff url("../../img/icon-map-marker.svg") no-repeat center;
+  background: #ffffff url("../img/icon-map-marker.svg") no-repeat center;
   background-size: 100% 100%;
 }
 
@@ -317,6 +317,7 @@
   .form__field {
     width: 620px;
     padding: 0;
+    display: flex;
 
     &--username {
       margin: 23px 0 0 0;
@@ -356,7 +357,6 @@
       .form__item {
         position: relative;
         margin: 32px 0 0 0;
-        display: flex;
         flex-direction: column-reverse;
 
         &--phone {
@@ -368,7 +368,7 @@
             display: block;
             width: 61px;
             height: 58px;
-            background: #e5e5e5 url("../../img/icon-phone.svg") no-repeat center;
+            background: #e5e5e5 url("../img/icon-phone.svg") no-repeat center;
           }
         }
 
@@ -381,7 +381,7 @@
             display: block;
             width: 61px;
             height: 58px;
-            background: #e5e5e5 url("../../img/icon-mail.svg") no-repeat center;
+            background: #e5e5e5 url("../img/icon-mail.svg") no-repeat center;
           }
         }
       }
