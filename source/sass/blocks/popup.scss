@@ -12,11 +12,11 @@
   transform: translateX(-160px);
 
   &--error {
-    top: 20%;
+    top: 35%;
   }
 
   &--submitted {
-    top: 50%;
+    top: 35%;
     background-color: #f2f2f2;
   }
 
@@ -65,6 +65,14 @@
     left: 50%;
     width: 460px;
     transform: translateX(-230px);
+
+    &--error {
+      top: 26%;
+    }
+
+    &--submitted {
+      top: 26%;
+    }
   }
 
   .popup__wrapper {
@@ -103,6 +111,14 @@
     left: 50%;
     width: 780px;
     transform: translateX(-390px);
+
+    &--error {
+      top: 30%;
+    }
+
+    &--submitted {
+      top: 30%;
+    }
   }
 
   .popup__wrapper {
