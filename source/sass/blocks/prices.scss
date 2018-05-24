@@ -2,11 +2,11 @@
 @import "../global/mixins";
 
 .prices {
-  background: #f2f2f2 url("../../img/bg-triangle-white.svg") no-repeat 50% 0;
+  background: #f2f2f2 url("../img/bg-triangle-white.svg") no-repeat 50% 0;
   background-size: 101% auto;
 }
 
-.prises__container {
+.prices__container {
   @include container;
   padding: 86px 0 45px;
   line-height: 2.1;
@@ -83,12 +83,12 @@
 
 .prices__content-item {
   padding: 15px 22px;
-  background: #ffffff url("../../img/icon-yes.svg") no-repeat 94% 50%;
+  background: #ffffff url("../img/icon-yes.svg") no-repeat 94% 50%;
   background-size: 32px 22px;
   border: 1px solid #f2f2f2;
 
   &--not-bundle {
-    background: #ffffff url("../../img/icon-no.svg") no-repeat 93% 47%;
+    background: #ffffff url("../img/icon-no.svg") no-repeat 93% 47%;
     background-size: 27px 26px;
   }
 }
@@ -102,7 +102,7 @@
     transform: translateX(0);
   }
 
-  .prises__container {
+  .prices__container {
     padding: 84px 20px 66px;
     line-height: 2.1;
     text-transform: uppercase;
@@ -143,11 +143,11 @@
   .prices__content-item {
     padding: 6px 15px;
     min-height: 47px;
-    background: #ffffff url("../../img/icon-yes.svg") no-repeat 50% 38%;
+    background: #ffffff url("../img/icon-yes.svg") no-repeat 50% 38%;
     background-size: 32px 22px;
 
     &--not-bundle {
-      background: #ffffff url("../../img/icon-no.svg") no-repeat 50% 38%;
+      background: #ffffff url("../img/icon-no.svg") no-repeat 50% 38%;
       background-size: 27px 26px;
     }
   }
@@ -160,7 +160,7 @@
 //Деск
 
 @media (min-width: $desktop-width) {
-  .prises__container {
+  .prices__container {
     padding: 144px 8px 95px;
   }
 
@@ -200,11 +200,11 @@
     font-size: 18px;
     line-height: 1.6;
     min-height: 61px;
-    background: #ffffff url("../../img/icon-yes.svg") no-repeat 50% 55%;
+    background: #ffffff url("../img/icon-yes.svg") no-repeat 50% 55%;
     background-size: 30px 22px;
 
     &--not-bundle {
-      background: #ffffff url("../../img/icon-no.svg") no-repeat 50% 55%;
+      background: #ffffff url("../img/icon-no.svg") no-repeat 50% 55%;
       background-size: 26px 26px;
     }
   }

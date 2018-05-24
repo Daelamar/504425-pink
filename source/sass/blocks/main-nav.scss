@@ -55,13 +55,14 @@
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;
-    width: 620px;
+    width: 640px;
     flex-grow: 1;
     justify-content: space-between;
   }
 
   .main-nav__item {
     position: relative;
+    margin-left: 20px;
 
     &--active {
       &::after {

@@ -15,6 +15,12 @@
 
 .contacts__list-wrapper {
   margin: 28px 0 0;
+
+  &--adress {
+    .contacts__description {
+      color: #d22856;
+    }
+  }
 }
 
 .contacts__question {

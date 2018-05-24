@@ -53,6 +53,12 @@
       }
     }
   }
+
+  &--nojs {
+    .main-header__button-menu {
+      display: none;
+    }
+  }
 }
 
 .main-header__logo-icon {
