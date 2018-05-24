@@ -138,6 +138,7 @@
 
 .form__legend {
   padding: 0 30px 0;
+  color: #d22856;
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -311,13 +312,15 @@
   }
 
   .form__legend {
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
   }
 
   .form__field {
+    position: relative;
     width: 620px;
     padding: 0;
-    display: flex;
 
     &--username {
       margin: 23px 0 0 0;
@@ -449,7 +452,7 @@
 
   .form__item {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
 
