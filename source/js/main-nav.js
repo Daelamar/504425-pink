@@ -2,6 +2,7 @@ var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-header__button-menu');
 var header = document.querySelector('.main-header');
 
+header.classList.remove('main-header--nojs');
 navMain.classList.add('main-nav--closed');
 header.classList.add('main-header--closed');
 

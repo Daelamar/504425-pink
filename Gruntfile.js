@@ -56,7 +56,6 @@ module.exports = function (grunt) {
         files: ["source/*.html"],
         tasks: ["posthtml"]
       },
-
       style: {
         files: ["source/sass/**/*.{scss,sass}"],
         tasks: ["sass", "postcss", "csso"]

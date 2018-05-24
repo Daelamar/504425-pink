@@ -6,7 +6,7 @@
   background-size: 101% auto;
 }
 
-.prises__container {
+.prices__container {
   @include container;
   padding: 86px 0 45px;
   line-height: 2.1;
@@ -102,7 +102,7 @@
     transform: translateX(0);
   }
 
-  .prises__container {
+  .prices__container {
     padding: 84px 20px 66px;
     line-height: 2.1;
     text-transform: uppercase;
@@ -160,7 +160,7 @@
 //Деск
 
 @media (min-width: $desktop-width) {
-  .prises__container {
+  .prices__container {
     padding: 144px 8px 95px;
   }
 
